@@ -1,23 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import CamposRegistro, { Campos } from './components/campos';
+import { ContenedorLogin } from './components/contenedorCampos';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <p>
           {/* Edit <code>src/App.js</code> and save to reload. */}
-          <h1>Holis Fer!</h1>
+          {/* <h1>Hola Mundo </h1> */}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       <ContenedorLogin titulo = "Iniciar sesión" />
+        
       </header>
     </div>
   );
