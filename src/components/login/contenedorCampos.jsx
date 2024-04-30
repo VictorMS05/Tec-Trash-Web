@@ -8,17 +8,17 @@ import logo_x from "./../../images/logo_x_login.png"
 export function ContenedorLogin(props){
     return(
       <div className="contenedor">
-        <h2>{props.titulo}</h2>
+        <h3>{props.titulo}</h3>
         <form method="post">
           <div className="campos-ingresos">
-            <CamposRegistro tipoCampo = "conIcono" nombreCampo = "Correo electrónico"  urlImg = {correito}/>
-            <CamposRegistro tipoCampo = "conIcono" nombreCampo = "Contraseña" urlImg = {candadito}/>
+            <CamposRegistro tipo="text" nombreCampo = "Correo electrónico"  urlImg = {correito}/>
+            <CamposRegistro tipo="password" nombreCampo = "Contraseña" urlImg = {candadito}/>
           </div>
           <a href=".">¿Olvidaste tu contraseña?</a>
-          <button>Ingresar</button>
+          <button type="submit">Ingresar</button>
           <div className='redesSociales'>
-            <a href='https://www.facebook.com/?locale=es_LA'><img className = "redes" src={logo_facebook}/></a>
             <a href='https://www.google.com/webhp?hl=es&sa=X&ved=0ahUKEwjppZX4triFAxXVIUQIHarcBdUQPAgJ'><img className = "redes" src={logo_google}/></a>
+            <a href='https://www.facebook.com/?locale=es_LA'><img className = "redes" src={logo_facebook}/></a>
             <a href='https://twitter.com/?lang=es'><img className = "redes" src={logo_x}/></a>
           </div>
           <label className="preguntarCuenta">¿No tienes una cuenta?</label>

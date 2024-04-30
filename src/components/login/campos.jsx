@@ -1,10 +1,10 @@
 export function CamposRegistro(props){
 
-    if(props.tipoCampo == "conIcono"){
+    if(props.urlImg){
         return(
             <div className="bloques-campos">
                 <img className = "iconitos" src={props.urlImg}/>
-                <input type="text" required/>
+                <input type={props.tipo} required/>
                 <label>{props.nombreCampo}</label>      
             </div>
             
@@ -12,7 +12,7 @@ export function CamposRegistro(props){
     }else{
         return(
             <div className="bloques-campos">
-                <input type="text" required/>
+                <input type={props.tipo} required/>
                 <label>{props.nombreCampo}</label>      
             </div>
             
