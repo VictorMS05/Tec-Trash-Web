@@ -12,7 +12,7 @@
 
 .bloques-campos{
   position: relative;
-  margin: 20px 0;
+  margin: 10px 0;
   width: 300px;
   border-bottom: 2px solid #fff;
 }
@@ -53,7 +53,7 @@ input:valid ~ label{
   position: absolute;
   color: #fff;
   font-size: 1.6rem;
-  top: 19px;
+  top: 17px;
   right: 8px;
   width: 20px;
   height: 20px;
@@ -72,8 +72,8 @@ input:valid ~ label{
 /*CONTENEDOR DEL LOGIN*/
 
 .contenedor{
-  /* position:relative;
-  display: flex; */
+  position:relative;
+  display: flex;
   flex-direction: column;
   width: 400px;
   background-color: rgba(203, 197, 197, 0.3);
@@ -87,9 +87,9 @@ input:valid ~ label{
 .contenedor h2{
   font-size: 2.3rem;
   color: #f4f4f8;
-  /* display: flex;
-  flex-direction: column; */
-  text-align:center;
+  display: flex;
+  /* flex-direction: column;
+  text-align:center; */
 }
 
 a{
@@ -99,10 +99,11 @@ a{
 .crear-cuenta{
   color: #271ea2;
   font-size: 14px;
-  position:relative;
+  /* position:relative; */
 }
 
 button{
+  display:flex;
   border-radius: 40px;
   background-color: #30C207;
   width: 140px;
@@ -112,23 +113,25 @@ button{
   padding: 8px;
   margin-top: 12px;
   margin-bottom: 12px;
+  justify-content: center;
+  align-items:center;
 }
 
 form{
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* text-align: center; */
+  /* align-items: center; */
 }
 .preguntarCuenta{
   font-size: 14px;
-  position: relative;
+  /* position: relative; */
   margin: 0;
 }
 
-.crear-cuenta, .preguntarCuenta{
+/* .crear-cuenta, .preguntarCuenta{
   display: inline;
-}
+} */
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

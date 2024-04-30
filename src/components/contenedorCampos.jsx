@@ -19,7 +19,7 @@ export function ContenedorLogin(props){
             <a href='https://www.google.com/webhp?hl=es&sa=X&ved=0ahUKEwjppZX4triFAxXVIUQIHarcBdUQPAgJ'><img className = "redes" src='http://imgfz.com/i/rXwCydP.png'/></a>
             <a href='https://twitter.com/?lang=es'><img className = "redes" src='http://imgfz.com/i/ipHB3Yu.png'/></a>
           </div>
-          <p className="preguntarCuenta">¿No tienes una cuenta?</p>
+          <label className="preguntarCuenta">¿No tienes una cuenta?</label>
           <a href="#" className="crear-cuenta">Crear una cuenta</a>
         </form>
     </div>
