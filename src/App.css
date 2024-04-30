@@ -8,6 +8,23 @@
   pointer-events: none;
 }
 
+/* LOGIN */
+#body-login{
+  background-image: url("./images/fondo_login.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  backface-visibility: visible;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  height: 100;
+}
+
 /*CAMPOS DE INGRESO DE DATOS*/
 
 .bloques-campos{
@@ -67,6 +84,7 @@ input:valid ~ label{
 .redes{
   flex: 1;
   margin: 0 10px;
+  width: 3vw;
 }
 
 /*CONTENEDOR DEL LOGIN*/
@@ -99,6 +117,7 @@ a{
 .crear-cuenta{
   color: #271ea2;
   font-size: 14px;
+  margin-left: 5px;
   /* position:relative; */
 }
 
@@ -113,6 +132,7 @@ button{
   padding: 8px;
   margin-top: 12px;
   margin-bottom: 12px;
+  margin-inline-start: 27%;
   justify-content: center;
   align-items:center;
 }
@@ -123,6 +143,7 @@ form{
   /* text-align: center; */
   /* align-items: center; */
 }
+
 .preguntarCuenta{
   font-size: 14px;
   /* position: relative; */
@@ -140,7 +161,7 @@ form{
 }
 
 .App-header {
-  background-image: url(https://i.ibb.co/YjKkgdt/fondo-tectrash2.png-);
+  /* background-image: url("./images/fondo.png");
   background-size: cover;
   background-position: center;
   backface-visibility: visible;
@@ -150,7 +171,7 @@ form{
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: white; */
 }
 
 .App-link {
