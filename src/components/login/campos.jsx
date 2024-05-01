@@ -7,7 +7,6 @@ export function CamposRegistro(props){
                 <input type={props.tipo} required/>
                 <label>{props.nombreCampo}</label>      
             </div>
-            
         )
     }else{
         return(

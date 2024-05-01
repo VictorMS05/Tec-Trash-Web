@@ -87,13 +87,15 @@ input:valid ~ label{
 
 .redesSociales{
   /* position: relative; */
+  width: 100%;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 .redes{
   flex: 1;
-  margin: 0 10px;
-  width: 3vw;
+  margin: 1vw 20px;
+  width: 4vw;
 }
 
 /*CONTENEDOR DEL LOGIN*/
@@ -104,7 +106,7 @@ input:valid ~ label{
   flex-direction: column;
   width: 400px;
   background-color: rgba(203, 197, 197, 0.3);
-  height: 450px;
+  padding: 2vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -160,7 +162,7 @@ form{
 .preguntarCuenta{
   font-size: 14px;
   /* position: relative; */
-  margin: 0;
+  margin:2vw 0;
 }
 
 /* .crear-cuenta, .preguntarCuenta{
