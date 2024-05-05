@@ -8,6 +8,13 @@
   pointer-events: none;
 }  
 
+/*! GENERAL */
+
+p {
+  margin: 0;
+}
+
+
 /*! PÁGINA PRINCIPAL */
 /** Header */
 header {
@@ -21,7 +28,7 @@ header {
 }
 
 #logo_header {
-  height: 90%;
+  height: 9vh;
   margin: 0;
 }
 
@@ -38,6 +45,41 @@ header {
   border: 0.2vw solid white;
   border-radius: 2vw;
   padding: 0.5vw 1vw;
+}
+
+/** Main section */
+#main_section_principal {
+  align-items: center;
+  background-image: url("./images/fondo_principal_inicio.png");
+  background-size: cover;
+  background-position: bottom;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 5.5vh;
+  justify-content: center;
+  padding: 9vh 0 8vh 0;
+  width: 101vw;
+}
+
+#title {
+  font-family: Intro;
+  font-size: 3.75rem;
+  margin: 0;
+}
+
+#subtitle {
+  font-family: Montserrat-Arabic;
+  font-size: 1.9rem;
+}
+
+#main_section_principal button {
+  background-color: #5C9BE6;
+  font-family: Montserrat-Arabic;
+  font-size: 1.5rem;
+  height: 11vh;
+  margin: 3vh 0;
+  width: 27.5vw;
 }
 
 /* LOGIN */
@@ -182,6 +224,7 @@ button{
   justify-content: center;
   align-items:center;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
+  cursor: pointer;
 }  
 
 form{
