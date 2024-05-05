@@ -1,11 +1,43 @@
 
 .App {
   text-align: center;
-}
+}  
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}  
+
+/*! PÁGINA PRINCIPAL */
+/** Header */
+header {
+  align-items: center;
+  background-color: black;
+  color: white;
+  display: flex;
+  height: 10vh;
+  justify-content: space-between;
+  padding: 0 2vw;
+}
+
+#logo_header {
+  height: 90%;
+  margin: 0;
+}
+
+#menu, #menu a {
+  align-items: center;
+  display: flex;
+  font-family: Intro;
+  font-size: 1.25rem;
+  gap: 1.75vw;
+  text-decoration: none;
+}  
+
+#registrarse {
+  border: 0.2vw solid white;
+  border-radius: 2vw;
+  padding: 0.5vw 1vw;
 }
 
 /* LOGIN */
@@ -24,12 +56,12 @@
   font-size: calc(10px + 2vmin);
   color: white;
   height: 100;
-}
+}  
 
 #body-login h3{
   top: 0.5vw;
   font-family: Intro, sans-serif;
-}
+}  
 
 /*CAMPOS DE INGRESO DE DATOS*/
 
@@ -40,7 +72,7 @@
   margin: 2vw 0;
   width: 300px;
   border-bottom: 2px solid #fff;
-}
+}    
 
 .bloques-campos label{ /*nombre del campo: correo, contra...*/
   position: absolute;
@@ -52,12 +84,12 @@
   pointer-events: node;
   transition: .5s;
   /* font-weight: bold; */
-}
+}  
 
 input:focus ~ label,
 input:valid ~ label{
    top: -5px; /*aqui era 5px */
-}
+}   
 
 .bloques-campos input{ /*lo que se escribe dentro de los campos*/
   /* position: relative; */
@@ -73,7 +105,7 @@ input:valid ~ label{
   padding-top: 5px;
   padding-bottom: 0;
   color: #f3eeee;
-}
+}  
 
 .iconitos{
   /* position: absolute; */
@@ -83,20 +115,20 @@ input:valid ~ label{
   margin: 0;
   width: 2vw;
   /* height: 2vw; */
-}
+}  
 
 .redesSociales{
   /* position: relative; */
   width: 100%;
   align-items: center;
   justify-content: space-evenly;
-}
+}  
 
 .redes{
   flex: 1;
   margin: 1vw 20px;
   width: 4vw;
-}
+}  
 
 /*CONTENEDOR DEL LOGIN*/
 
@@ -111,7 +143,7 @@ input:valid ~ label{
   justify-content: center;
   align-items: center;
   border-radius: 30px;
-}
+}  
 
 .contenedor h2{
   font-size: 2.3rem;
@@ -119,19 +151,19 @@ input:valid ~ label{
   display: flex;
   /* flex-direction: column;
   text-align:center; */
-}
+}  
 
 a{
   color: #fcfafa;
   font-size: 14px;
-}
+}  
 
 .crear-cuenta{
   color: #271ea2;
   font-size: 14px;
   margin-left: 5px;
   /* position:relative; */
-}
+}  
 
 button{
   display:flex;
@@ -150,24 +182,24 @@ button{
   justify-content: center;
   align-items:center;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
-}
+}  
 
 form{
   /* display: flex; */
   /* flex-direction: column; */
   /* text-align: center; */
   /* align-items: center; */
-}
+}  
 
 .preguntarCuenta{
   font-size: 14px;
   /* position: relative; */
   margin:2vw 0;
-}
+}  
 
 /* .crear-cuenta, .preguntarCuenta{
   display: inline;
-} */
+} */  
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
