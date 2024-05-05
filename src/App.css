@@ -1,11 +1,120 @@
 
 .App {
   text-align: center;
-}
+}  
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}  
+
+/*! GENERAL */
+
+p {
+  margin: 0;
+}
+
+.scroll {
+  cursor: pointer;
+}
+
+/*! PÁGINA PRINCIPAL */
+/** Header */
+header {
+  align-items: center;
+  background-color: black;
+  color: white;
+  display: flex;
+  height: 10vh;
+  justify-content: space-between;
+  padding: 0 2vw;
+}
+
+#logo_header {
+  height: 9vh;
+  margin: 0;
+}
+
+#menu, #menu a {
+  align-items: center;
+  display: flex;
+  font-family: Intro;
+  font-size: 1.25rem;
+  gap: 1.75vw;
+  text-decoration: none;
+}  
+
+#registrarse {
+  border: 0.2vw solid white;
+  border-radius: 2vw;
+  padding: 0.5vw 1vw;
+}
+
+/** Main section */
+#main_principal {
+  align-items: center;
+  background-image: url("./images/fondo_principal_inicio.png");
+  background-size: cover;
+  background-position: bottom;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 5.5vh;
+  justify-content: center;
+  padding: 9vh 0 8vh 0;
+  width: 101vw;
+}
+
+#main_title {
+  font-family: Intro;
+  font-size: 3.75rem;
+  margin: 0;
+}
+
+#main_subtitle {
+  font-family: Montserrat-Arabic;
+  font-size: 1.9rem;
+}
+
+#main_principal button {
+  background-color: #5C9BE6;
+  font-family: Montserrat-Arabic;
+  font-size: 1.5rem;
+  height: 11vh;
+  margin: 3vh 0;
+  width: 27.5vw;
+}
+
+/** Section "Servicios" */
+#servicios {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5.5vh;
+  padding: 8vh 0 8vh 0;
+  width: 101vw;
+}
+
+#title {
+  font-family: Intro;
+  font-size: 2.75rem;
+  margin: 0;
+
+}
+
+#servicios_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: 
+  "item1 item2 item3"
+  "item4 item5 .";
+  gap: 5vw;
+  justify-content: center;
+}
+
+.servicio img {
+  height: 20vh;
 }
 
 /* LOGIN */
@@ -24,12 +133,12 @@
   font-size: calc(10px + 2vmin);
   color: white;
   height: 100;
-}
+}  
 
 #body-login h3{
   top: 0.5vw;
   font-family: Intro, sans-serif;
-}
+}  
 
 /*CAMPOS DE INGRESO DE DATOS*/
 
@@ -40,7 +149,7 @@
   margin: 2vw 0;
   width: 300px;
   border-bottom: 2px solid #fff;
-}
+}    
 
 .bloques-campos label{ /*nombre del campo: correo, contra...*/
   position: absolute;
@@ -52,12 +161,12 @@
   pointer-events: node;
   transition: .5s;
   /* font-weight: bold; */
-}
+}  
 
 input:focus ~ label,
 input:valid ~ label{
    top: -5px; /*aqui era 5px */
-}
+}   
 
 .bloques-campos input{ /*lo que se escribe dentro de los campos*/
   /* position: relative; */
@@ -101,13 +210,13 @@ input:valid ~ label{
   width: 100%;
   align-items: center;
   justify-content: space-evenly;
-}
+}  
 
 .redes{
   flex: 1;
   margin: 1vw 20px;
   width: 4vw;
-}
+}  
 
 /*CONTENEDOR DEL LOGIN*/
 
@@ -122,7 +231,7 @@ input:valid ~ label{
   justify-content: center;
   align-items: center;
   border-radius: 30px;
-}
+}  
 
 .contenedor h2{
   font-size: 2.3rem;
@@ -130,19 +239,19 @@ input:valid ~ label{
   display: flex;
   /* flex-direction: column;
   text-align:center; */
-}
+}  
 
 a{
   color: #fcfafa;
   font-size: 14px;
-}
+}  
 
 .crear-cuenta{
   color: #271ea2;
   font-size: 14px;
   margin-left: 5px;
   /* position:relative; */
-}
+}  
 
 button{
   display:flex;
@@ -160,20 +269,21 @@ button{
   justify-content: center;
   align-items:center;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
-}
+  cursor: pointer;
+}  
 
 form{
   /* display: flex; */
   /* flex-direction: column; */
   /* text-align: center; */
   /* align-items: center; */
-}
+}  
 
 .preguntarCuenta{
   font-size: 14px;
   /* position: relative; */
   margin:2vw 0;
-}
+}  
 
 /* .crear-cuenta, .preguntarCuenta{
   display: inline;
