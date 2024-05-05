@@ -4,15 +4,17 @@ export function CamposRegistro(props){
         return(
             <div className="bloques-campos">
                 <img className = "iconitos" src={props.urlImg}/>
-                <input type={props.tipo} required/>
-                <label>{props.nombreCampo}</label>      
+                <input type={props.tipo} value={props.nombJson} name={props.nombre} id={props.id} onChange={props.evento} required/>
+                <label>{props.nombreCampo}</label> 
+                <img className = "ojito" src={props.urlImg}/>     
             </div>
         )
     }else{
         return(
             <div className="bloques-campos">
-                <input type={props.tipo} required/>
-                <label>{props.nombreCampo}</label>      
+                <input type={props.tipo} value={props.nombJson} name={props.nombre} id={props.id} onChange={props.evento} required/>
+                <label>{props.nombreCampo}</label>  
+                    
             </div>
             
         )
@@ -21,6 +23,5 @@ export function CamposRegistro(props){
 
     
 }
-
 export default CamposRegistro
 

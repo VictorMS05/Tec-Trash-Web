@@ -73,9 +73,20 @@ input:valid ~ label{
   padding-top: 5px;
   padding-bottom: 0;
   color: #f3eeee;
+  margin-bottom: 0%;
 }
 
 .iconitos{
+  /* position: absolute; */
+  color: #fff;
+  font-size: 1.6rem;
+  /* top: 17px; */
+  margin: 0;
+  width: 2vw;
+  /* height: 2vw; */
+}
+
+.ojito{
   /* position: absolute; */
   color: #fff;
   font-size: 1.6rem;
@@ -141,7 +152,6 @@ button{
   border: none;
   font-size: 16px;
   font-family: Montserrat, sans-serif;
-  /* font-weight: bold; */
   color: #f4f4f8;
   padding: 12px 8px;
   margin-top: 12px;
@@ -169,25 +179,28 @@ form{
   display: inline;
 } */
 
+.error{
+  color: rgb(241, 38, 38);
+  font-size: small;
+  font-weight: bold;
+}
+.contraIncorrecta{
+  color: rgb(241, 38, 38);
+  font-size: small;
+  text-align: left;
+  margin-top: 0%;
+}
+.esconder{
+  display: none;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
-.App-header {
-  /* background-image: url("./images/fondo.png");
-  background-size: cover;
-  background-position: center;
-  backface-visibility: visible;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white; */
-}
+
 
 .App-link {
   color: #61dafb;
