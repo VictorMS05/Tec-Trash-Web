@@ -14,6 +14,9 @@ p {
   margin: 0;
 }
 
+.scroll {
+  cursor: pointer;
+}
 
 /*! PÁGINA PRINCIPAL */
 /** Header */
@@ -48,7 +51,7 @@ header {
 }
 
 /** Main section */
-#main_section_principal {
+#main_principal {
   align-items: center;
   background-image: url("./images/fondo_principal_inicio.png");
   background-size: cover;
@@ -62,24 +65,56 @@ header {
   width: 101vw;
 }
 
-#title {
+#main_title {
   font-family: Intro;
   font-size: 3.75rem;
   margin: 0;
 }
 
-#subtitle {
+#main_subtitle {
   font-family: Montserrat-Arabic;
   font-size: 1.9rem;
 }
 
-#main_section_principal button {
+#main_principal button {
   background-color: #5C9BE6;
   font-family: Montserrat-Arabic;
   font-size: 1.5rem;
   height: 11vh;
   margin: 3vh 0;
   width: 27.5vw;
+}
+
+/** Section "Servicios" */
+#servicios {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 5.5vh;
+  padding: 8vh 0 8vh 0;
+  width: 101vw;
+}
+
+#title {
+  font-family: Intro;
+  font-size: 2.75rem;
+  margin: 0;
+
+}
+
+#servicios_container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: 
+  "item1 item2 item3"
+  "item4 item5 .";
+  gap: 5vw;
+  justify-content: center;
+}
+
+.servicio img {
+  height: 20vh;
 }
 
 /* LOGIN */

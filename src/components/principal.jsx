@@ -1,11 +1,13 @@
 import { Header } from "./principal/header";
-import { MainSection } from "./principal/main_section";
+import { Main } from "./principal/main";
+import { Servicios } from "./principal/servicios";
 
 export function Principal() {
     return (
         <div>
             <Header />
-            <MainSection />
+            <Main />
+            <Servicios />
         </div>
     )
 }
