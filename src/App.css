@@ -62,7 +62,6 @@ header {
   gap: 5.5vh;
   justify-content: center;
   padding: 9vh 0 8vh 0;
-  width: 101vw;
 }
 
 #main_title {
@@ -90,31 +89,47 @@ header {
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 5.5vh;
-  padding: 8vh 0 8vh 0;
-  width: 101vw;
+  gap: 5vh;
+  padding: 6vh 0;
 }
 
 #title {
   font-family: Intro;
   font-size: 2.75rem;
-  margin: 0;
+  margin: 2vh 0;
 
 }
 
-#servicios_container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-areas: 
-  "item1 item2 item3"
-  "item4 item5 .";
-  gap: 5vw;
+.container {
+  display: flex;
+  gap: 2.5vw;
   justify-content: center;
 }
 
-.servicio img {
-  height: 20vh;
+.option {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vh;
+  width: 32vw;
+}
+
+.option img {
+  height: 11.5vw;
+}
+
+.option_title {
+  font-family: Montserrat-Arabic;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.option_description {
+  font-family: Montserrat-Arabic;
+  font-size: 1rem;
+  padding: 0 2vw;
+  text-align: center;
 }
 
 /* LOGIN */
