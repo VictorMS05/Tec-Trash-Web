@@ -4,6 +4,7 @@ import candadito from "./../../images/icon_contra_login.png";
 import logo_facebook from "./../../images/logo_facebook_login.png"
 import logo_google from "./../../images/logo_google_login.png"
 import logo_x from "./../../images/logo_x_login.png"
+import ojito from "./../../images/icon_mostrarcontra_login.png"
 import { useState } from "react";
 
 
@@ -12,12 +13,17 @@ export function ContenedorLogin(props){
   
   var [email, setEmail] = useState('');
   var [contra, setContra] = useState('');
- var [mensaje, setMensaje] = useState('');
+  var [mensaje, setMensaje] = useState('');
+  var [mostrarPass, setMostrarPass] = useState(false);
 
   async function ingresar(event){
-      var url, json, contraIncorrecta = document.getElementById("contraIncorrecta");
+      var url, json, contraIncorrecta;
+
   email = document.getElementById("correito").value;
   contra = document.getElementById("password").value;
+  contraIncorrecta = document.getElementById("contraIncorrecta");
+  
+
   url = 'http://127.0.0.1:5000/cliente/iniciar-sesion';
   json ={
     correo: email,
@@ -54,17 +60,19 @@ export function ContenedorLogin(props){
             setMensaje("Hubo un error al intentar iniciar sesión.");
             alert("ASDFGHJK")
         });
-    
 
   }
+
+
+    
 
     return(
       <div className="contenedor">
         <h3>{props.titulo}</h3>
         <form onSubmit={ingresar} >
           <div className="campos-ingresos" id="login-form">
-            <CamposRegistro type="text" nombreCampo = "Correo electrónico"  urlImg = {correito} nombre = "correito" id="correito" evento = {(e) => setEmail(e.target.value)}/>
-            <CamposRegistro tipo="password" nombreCampo = "Contraseña" urlImg = {candadito} nombre = "password" id="password" evento = {(e) => setContra(e.target.value)}/>
+            <CamposRegistro  type="text" nombreCampo = "Correo electrónico"  urlImg = {correito} nombre = "correito" id="correito" evento = {(e) => setEmail(e.target.value)}/>
+            <CamposRegistro tipo="password" nombreCampo = "Contraseña" urlImg = {candadito} urlImg2 = {ojito}  idOjito = "mostrar_contra" nombre = "password" id="password" evento = {(e) => setContra(e.target.value)}/>
           </div>
           <p id = "contraIncorrecta" className="contraIncorrecta esconder">Contraseña incorrecta</p>
           <p className="error esconder">Error al iniciar sesión</p>

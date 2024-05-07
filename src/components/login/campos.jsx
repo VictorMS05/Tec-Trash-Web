@@ -6,7 +6,7 @@ export function CamposRegistro(props){
                 <img className = "iconitos" src={props.urlImg}/>
                 <input type={props.tipo} value={props.nombJson} name={props.nombre} id={props.id} onChange={props.evento} required/>
                 <label>{props.nombreCampo}</label> 
-                <img className = "ojito" src={props.urlImg}/>     
+                <img className = "ojito" id = {props.idOjito} onClick = {props.eventoClic} src={props.urlImg2}/>     
             </div>
         )
     }else{
