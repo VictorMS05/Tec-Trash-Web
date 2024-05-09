@@ -8,6 +8,12 @@
   pointer-events: none;
 }  
 
+.avisos-texto{
+  /* text-align: center; */
+  font-size: 14px;
+  margin-top: 20px;
+}
+
 /*! GENERAL */
 
 p {
@@ -34,6 +40,7 @@ header {
   height: 9vh;
   margin: 0;
 }
+
 
 #menu, #menu a {
   align-items: center;
@@ -146,6 +153,7 @@ header {
   display: flex;
   position: relative;
   align-items: center;
+  justify-content: center;
   margin: 2vw 0;
   width: 300px;
   border-bottom: 2px solid #fff;
@@ -158,7 +166,7 @@ header {
   transform: translateY(-40%);
   color: #eaeef1;
   font-size: 1rem;
-  pointer-events: node;
+  /* pointer-events: node; */
   transition: .5s;
   /* font-weight: bold; */
 }  
@@ -185,6 +193,52 @@ input:valid ~ label{
   margin-bottom: 0%;
 }
 
+button{
+  /* display:flex; */
+  border-radius: 40px;
+  background-color: #30C207;
+  width: 140px;
+  border: none;
+  font-size: 16px;
+  font-family: Montserrat, sans-serif;
+  color: #f4f4f8;
+  padding: 12px 8px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
+  cursor: pointer;
+}  
+
+.campos-ingresos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  background-color: rgba(203, 197, 197, 0.3);
+  padding: 2vw;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}  
+
+.contenedor h2{
+  font-size: 2.3rem;
+  font-family: Intro Normal;
+  color: #f4f4f8;
+  align-items: center;
+  justify-content: center;
+}  
+
+#cuenta-texto{
+  text-align: center;
+}
+
 .iconitos{
   /* position: absolute; */
   color: #fff;
@@ -206,40 +260,19 @@ input:valid ~ label{
 }
 
 .redesSociales{
-  /* position: relative; */
-  width: 100%;
-  align-items: center;
-  justify-content: space-evenly;
+  display: flex;
+  justify-content:center;
 }  
 
 .redes{
-  flex: 1;
-  margin: 1vw 20px;
-  width: 4vw;
+  /* flex: 1; */
+  margin: 1.2vw 15px;
+  width: 6vw;
 }  
 
 /*CONTENEDOR DEL LOGIN*/
 
-.contenedor{
-  position:relative;
-  display: flex;
-  flex-direction: column;
-  width: 400px;
-  background-color: rgba(203, 197, 197, 0.3);
-  padding: 2vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 30px;
-}  
 
-.contenedor h2{
-  font-size: 2.3rem;
-  color: #f4f4f8;
-  display: flex;
-  /* flex-direction: column;
-  text-align:center; */
-}  
 
 a{
   color: #fcfafa;
@@ -248,29 +281,11 @@ a{
 
 .crear-cuenta{
   color: #271ea2;
-  font-size: 14px;
-  margin-left: 5px;
+  /* margin-left: 5px; */
   /* position:relative; */
 }  
 
-button{
-  display:flex;
-  border-radius: 40px;
-  background-color: #30C207;
-  width: 140px;
-  border: none;
-  font-size: 16px;
-  font-family: Montserrat, sans-serif;
-  color: #f4f4f8;
-  padding: 12px 8px;
-  margin-top: 12px;
-  margin-bottom: 12px;
-  margin-inline-start: 27%;
-  justify-content: center;
-  align-items:center;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
-  cursor: pointer;
-}  
+
 
 form{
   /* display: flex; */
@@ -279,11 +294,7 @@ form{
   /* align-items: center; */
 }  
 
-.preguntarCuenta{
-  font-size: 14px;
-  /* position: relative; */
-  margin:2vw 0;
-}  
+
 
 /* .crear-cuenta, .preguntarCuenta{
   display: inline;
