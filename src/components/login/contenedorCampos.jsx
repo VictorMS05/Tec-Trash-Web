@@ -1,4 +1,5 @@
 import CamposRegistro from "./campos";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import correito from "./../../images/icon_correo_login.png";
 import candadito from "./../../images/icon_contra_login.png";
 import logo_facebook from "./../../images/logo_facebook_login.png"
@@ -7,7 +8,7 @@ import logo_x from "./../../images/logo_x_login.png"
 import ojito from "./../../images/icon_mostrarcontra_login.png"
 import { useState } from "react";
 import { Link } from 'react-router-dom';
-import { Link as Scroll } from 'react-scroll';
+import { Cliente } from './../cliente';
 
 
 
@@ -16,14 +17,15 @@ export function ContenedorLogin(props){
   var [email, setEmail] = useState('');
   var [contra, setContra] = useState('');
   var [mensaje, setMensaje] = useState('');
-  var [mostrarPass, setMostrarPass] = useState(false);
 
   async function ingresar(event){
-      var url, json, contraIncorrecta;
+      var url, json, contraIncorrecta, pagina_cliente;
 
   email = document.getElementById("correito").value;
   contra = document.getElementById("password").value;
   contraIncorrecta = document.getElementById("contraIncorrecta");
+
+  
   
 
   url = 'http://127.0.0.1:5000/cliente/iniciar-sesion';
@@ -70,6 +72,9 @@ export function ContenedorLogin(props){
 
     return(
       <div className="contenedor">
+        <Routes>
+          <Route path="/cliente" element={<Cliente />} />
+        </Routes>
         <h3>{props.titulo}</h3>
         <form onSubmit={ingresar} >
           <div className="campos-ingresos">
@@ -79,7 +84,7 @@ export function ContenedorLogin(props){
             <p id = "contraIncorrecta" className="contraIncorrecta esconder">Contraseña incorrecta</p>
             <p className="error esconder">Error al iniciar sesión</p>
             <Link to='/login' className="avisos-texto">¿Olvidaste tu contraseña?</Link>
-            <button type="submit">Ingresar</button>
+            <Link to ='/cliente'><button type="submit">Ingresar</button></Link>
           </div>
           
           <div className='redesSociales'>
@@ -93,12 +98,9 @@ export function ContenedorLogin(props){
             <label className="avisos-texto">¿Tienes una empresa?</label>
             <Link className="crear-cuenta avisos-texto">Inicia sesión</Link>
           </div>
-          
-          
-          
         </form>
-    </div>
-    
+      </div>
+      
     )
     
 }

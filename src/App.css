@@ -165,7 +165,7 @@ header {
   left: 48px;
   transform: translateY(-40%);
   color: #eaeef1;
-  font-size: 1rem;
+  font-size: 0.8rem;
   /* pointer-events: node; */
   transition: .5s;
   /* font-weight: bold; */
@@ -245,7 +245,7 @@ button{
   font-size: 1.6rem;
   /* top: 17px; */
   margin: 0;
-  width: 2vw;
+  width: 1.9vw;
   /* height: 2vw; */
 }
 
@@ -267,7 +267,7 @@ button{
 .redes{
   /* flex: 1; */
   margin: 1.2vw 15px;
-  width: 6vw;
+  width: 4vw;
 }  
 
 /*CONTENEDOR DEL LOGIN*/
