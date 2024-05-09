@@ -19,6 +19,11 @@ p {
 }
 
 /*! PÁGINA PRINCIPAL */
+
+#principal {
+  position: relative;
+}
+
 /** Header */
 header {
   align-items: center;
@@ -55,7 +60,7 @@ header {
   align-items: center;
   background-image: url("./images/fondo_principal_inicio.png");
   background-size: cover;
-  background-position: bottom;
+  background-position-y: 10%;
   color: white;
   display: flex;
   flex-direction: column;
@@ -102,7 +107,7 @@ header {
 
 .container {
   display: flex;
-  gap: 2.5vw;
+  gap: 1.25vw;
   justify-content: center;
 }
 
@@ -132,7 +137,240 @@ header {
   text-align: center;
 }
 
-/* LOGIN */
+/** Section "Nosotros" */
+#nosotros_title {
+  background-image: url("./images/fondo_principal_inicio.png");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  font-family: Intro;
+  font-size: 2.25rem;
+  padding: 4vh 0;
+  text-align: center;
+}
+
+#quienes_somos_container {
+  align-items: center;
+  display: flex;
+  padding: 3vh 0 0 3vw;
+}
+
+.nosotros_subtitle {
+  font-family: Intro;
+  font-size: 2.1rem;
+  margin: 3vh 1.75vw;
+}
+
+#quienes_somos_description {
+  border: #68AA24 0.75vw solid;
+  border-radius: 4vw;
+  font-family: Montserrat-Arabic;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  padding: 1.5vh 2vw;
+  text-align: center;
+  width: 50vw;
+}
+
+#equipo_tectrash {
+  width: 40vw;
+}
+
+#mision_container, #vision_container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 3vh 3vw 3vh 6vw;
+}
+
+.nosotros_image {
+  margin-left: 3vw;
+  width: 20vw;
+}
+
+#mision_container div {
+  text-align: right;
+}
+
+#mision_description {
+  border: #5C9BE6 0.75vw solid;
+  border-radius: 4vw;
+  font-family: Montserrat-Arabic;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  padding: 1.5vh 2vw;
+  text-align: center;
+  width: 56vw;
+}
+
+#vision_description {
+  border: #68AA24 0.75vw solid;
+  border-radius: 4vw;
+  font-family: Montserrat-Arabic;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  padding: 1.5vh 2vw;
+  text-align: center;
+  width: 56vw;
+}
+
+#valores_container, #ubicacion_container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 3vh 0 3vh 0;
+}
+
+.valor_element_verde {
+  border: #68AA24 0.75vw solid;
+  border-radius: 4vw;
+  font-family: Montserrat-Arabic;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  margin-bottom: 2.25vh;
+  padding: 1.5vh 2vw;
+  text-align: center;
+  width: 90vw;
+}
+
+.valor_element_azul {
+  border: #5C9BE6 0.75vw solid;
+  border-radius: 4vw;
+  font-family: Montserrat-Arabic;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  margin-bottom: 2.25vh;
+  padding: 1.5vh 2vw;
+  text-align: center;
+  width: 90vw;
+}
+
+#ubicacion_tectrash {
+  border: #5C9BE6 0.75vw solid;
+  border-radius: 4vw;
+  height: 55vh;
+  margin: 3vh 0;
+  width: 65vw;
+}
+
+#direccion {
+  font-family: Montserrat-Arabic;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 3vh 0;
+}
+
+/** Footer */
+footer {
+  align-items: center;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 6.5vh;
+  padding: 9vh 0 0 0;
+}
+
+#contacto_principal_container {
+  display: flex;
+  gap: 10vw;
+  padding-left: 8vw;
+}
+
+#contacto_principal_container img {
+  height: 5vw;
+}
+
+.contacto_principal {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: Montserrat-Arabic;
+  font-size: 1rem;
+  gap: 2.5vh;
+  justify-content: end;
+}
+
+#informacion_adicional {
+  align-items: end;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1vh;
+  width: 98%;
+}
+
+#informacion_adicional p, #informacion_adicional a {
+  font-family: Montserrat-Arabic;
+  font-size: 0.75rem;
+  text-decoration: none;
+}
+
+#redes_sociales_container {
+  display: flex;
+  gap: 1vw;
+  padding: 0 0 1vh 2vw;
+}
+
+#redes_sociales_container a img {
+  border: white 0.2vw solid;
+  border-radius: 50%;
+  height: 4vw;
+}
+
+#aviso_privacidad_button {
+  cursor: pointer;
+}
+
+/** Aviso de privacidad */
+
+#aviso_privacidad_background {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+  color: white;
+  display: flex;
+  height: 100%;
+  left: 0;
+  padding: 5vh 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#aviso_privacidad_container {
+  align-items: center;
+  background-color: #68AA24;
+  border-radius: 4vw;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  left: 25%;
+  padding: 3vh 3vw;
+  position: fixed;
+  width: 50%;
+}
+
+#aviso_privacidad_container button {
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-family: Montserrat-Arabic;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  width: auto;
+}
+
+#aviso_privacidad_description {
+  font-family: Montserrat-Arabic;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  overflow-y: auto;
+  max-height: 50vh;
+  /* text-align: center; */
+}
+
+/*! LOGIN */
 #body-login{
   background-image: url("./images/fondo_login.png");
   background-size: cover;
