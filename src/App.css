@@ -12,23 +12,63 @@
   /* text-align: center; */
   font-size: 14px;
   margin-top: 20px;
-}
+}  
 
-/*! GENERAL */
+/*! <------------------------- GENERAL -------------------------> */
+
+button {
+  background-color: #30C207;
+  border: none;
+  border-radius: 5vw;
+  color: white;
+  cursor: pointer;
+  font-family: Montserrat-Arabic;
+}
 
 p {
   margin: 0;
-}
+}  
 
 .scroll {
   cursor: pointer;
+}  
+
+/** Ventana emergente */
+.ventana_emergente_background {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+  color: white;
+  display: flex;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
-/*! PÁGINA PRINCIPAL */
-
-#principal {
-  position: relative;
+.ventana_emergente_container {
+  align-items: center;
+  background-color: #68AA24;
+  border: white 0.2vw solid;
+  border-radius: 4vw;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  /* gap: 5vh; */
+  left: 25%;
+  padding: 3vh 3vw;
+  position: fixed;
+  width: 50%;
 }
+
+.ventana_emergente_container button {
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 2rem;
+  margin-left: auto;
+}
+
+/*! <------------------------- PÁGINA PRINCIPAL -------------------------> */
 
 /** Header */
 header {
@@ -39,12 +79,12 @@ header {
   height: 10vh;
   justify-content: space-between;
   padding: 0 2vw;
-}
+}  
 
 #logo_header {
   height: 9vh;
   margin: 0;
-}
+}  
 
 
 #menu, #menu a {
@@ -54,38 +94,37 @@ header {
   font-size: 1.25rem;
   gap: 1.75vw;
   text-decoration: none;
-}  
+}    
 
 #registrarse {
   border: 0.2vw solid white;
   border-radius: 2vw;
   padding: 0.5vw 1vw;
-}
+}  
 
 /** Main section */
 #main_principal {
   align-items: center;
   background-image: url("./images/fondo_principal_inicio.png");
   background-size: cover;
-  background-position-y: 10%;
   color: white;
   display: flex;
   flex-direction: column;
   gap: 5.5vh;
   justify-content: center;
   padding: 9vh 0 8vh 0;
-}
+}  
 
 #main_title {
   font-family: Intro;
   font-size: 3.75rem;
   margin: 0;
-}
+}  
 
 #main_subtitle {
   font-family: Montserrat-Arabic;
   font-size: 1.9rem;
-}
+}  
 
 #main_principal button {
   background-color: #5C9BE6;
@@ -94,7 +133,7 @@ header {
   height: 11vh;
   margin: 3vh 0;
   width: 27.5vw;
-}
+}  
 
 /** Section "Servicios" */
 #servicios {
@@ -103,20 +142,20 @@ header {
   flex-direction: column;
   gap: 5vh;
   padding: 6vh 0;
-}
+}  
 
 #title {
   font-family: Intro;
   font-size: 2.75rem;
   margin: 2vh 0;
 
-}
+}  
 
 .container {
   display: flex;
   gap: 1.25vw;
   justify-content: center;
-}
+}  
 
 .option {
   align-items: center;
@@ -124,25 +163,25 @@ header {
   flex-direction: column;
   gap: 1.5vh;
   width: 32vw;
-}
+}  
 
 .option img {
   height: 11.5vw;
-}
+}  
 
 .option_title {
   font-family: Montserrat-Arabic;
   font-size: 1.4rem;
   font-weight: bold;
   margin: 0;
-}
+}  
 
 .option_description {
   font-family: Montserrat-Arabic;
   font-size: 1rem;
   padding: 0 2vw;
   text-align: center;
-}
+}  
 
 /** Section "Nosotros" */
 #nosotros_title {
@@ -154,19 +193,19 @@ header {
   font-size: 2.25rem;
   padding: 4vh 0;
   text-align: center;
-}
+}  
 
 #quienes_somos_container {
   align-items: center;
   display: flex;
   padding: 3vh 0 0 3vw;
-}
+}  
 
 .nosotros_subtitle {
   font-family: Intro;
   font-size: 2.1rem;
   margin: 3vh 1.75vw;
-}
+}  
 
 #quienes_somos_description {
   border: #68AA24 0.75vw solid;
@@ -177,27 +216,27 @@ header {
   padding: 1.5vh 2vw;
   text-align: center;
   width: 50vw;
-}
+}  
 
 #equipo_tectrash {
   width: 40vw;
-}
+}  
 
 #mision_container, #vision_container {
   align-items: center;
   display: flex;
   justify-content: space-between;
   padding: 3vh 3vw 3vh 6vw;
-}
+}  
 
 .nosotros_image {
   margin-left: 3vw;
   width: 20vw;
-}
+}  
 
 #mision_container div {
   text-align: right;
-}
+}  
 
 #mision_description {
   border: #5C9BE6 0.75vw solid;
@@ -208,7 +247,7 @@ header {
   padding: 1.5vh 2vw;
   text-align: center;
   width: 56vw;
-}
+}  
 
 #vision_description {
   border: #68AA24 0.75vw solid;
@@ -219,14 +258,14 @@ header {
   padding: 1.5vh 2vw;
   text-align: center;
   width: 56vw;
-}
+}  
 
 #valores_container, #ubicacion_container {
   align-items: center;
   display: flex;
   flex-direction: column;
   padding: 3vh 0 3vh 0;
-}
+}  
 
 .valor_element_verde {
   border: #68AA24 0.75vw solid;
@@ -238,7 +277,7 @@ header {
   padding: 1.5vh 2vw;
   text-align: center;
   width: 90vw;
-}
+}  
 
 .valor_element_azul {
   border: #5C9BE6 0.75vw solid;
@@ -250,7 +289,7 @@ header {
   padding: 1.5vh 2vw;
   text-align: center;
   width: 90vw;
-}
+}  
 
 #ubicacion_tectrash {
   border: #5C9BE6 0.75vw solid;
@@ -258,14 +297,14 @@ header {
   height: 55vh;
   margin: 3vh 0;
   width: 65vw;
-}
+}  
 
 #direccion {
   font-family: Montserrat-Arabic;
   font-size: 1.4rem;
   font-weight: bold;
   margin: 3vh 0;
-}
+}  
 
 /** Footer */
 footer {
@@ -276,17 +315,17 @@ footer {
   flex-direction: column;
   gap: 6.5vh;
   padding: 9vh 0 0 0;
-}
+}  
 
 #contacto_principal_container {
   display: flex;
   gap: 10vw;
   padding-left: 8vw;
-}
+}  
 
 #contacto_principal_container img {
   height: 5vw;
-}
+}  
 
 .contacto_principal {
   align-items: center;
@@ -296,7 +335,7 @@ footer {
   font-size: 1rem;
   gap: 2.5vh;
   justify-content: end;
-}
+}  
 
 #informacion_adicional {
   align-items: end;
@@ -304,80 +343,44 @@ footer {
   justify-content: space-between;
   padding-bottom: 1vh;
   width: 98%;
-}
+}  
 
-#informacion_adicional p, #informacion_adicional a {
-  font-family: Montserrat-Arabic;
+.informacion_adicional_label {
+  background-color: rgba(0, 0, 0, 0);
   font-size: 0.75rem;
-  text-decoration: none;
-}
+}  
 
 #redes_sociales_container {
   display: flex;
   gap: 1vw;
   padding: 0 0 1vh 2vw;
-}
+}  
 
 #redes_sociales_container a img {
   border: white 0.2vw solid;
   border-radius: 50%;
   height: 4vw;
-}
-
-#aviso_privacidad_button {
-  cursor: pointer;
-}
+}  
 
 /** Aviso de privacidad */
 
-#aviso_privacidad_background {
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(5px);
-  color: white;
-  display: flex;
-  height: 100%;
-  left: 0;
-  padding: 5vh 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-#aviso_privacidad_container {
-  align-items: center;
-  background-color: #68AA24;
-  border-radius: 4vw;
-  box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 5vh;
-  left: 25%;
-  padding: 3vh 3vw;
-  position: fixed;
-  width: 50%;
-}
-
-#aviso_privacidad_container button {
-  background-color: rgba(0, 0, 0, 0);
-  color: white;
+#aviso_privacidad_content {
+  background-color: #438617;
+  border-radius: 1vw;
   font-family: Montserrat-Arabic;
-  font-size: 2rem;
-  margin: 0;
-  padding: 0;
-  width: auto;
-}
-
-#aviso_privacidad_description {
-  font-family: Montserrat-Arabic;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.5rem;
-  overflow-y: auto;
-  max-height: 50vh;
-  /* text-align: center; */
+  overflow-y: auto; /* Scrollbar */
+  max-height: 50vh; /* Scrollbar */
+  padding: 2vw;
+  text-align: justify;
 }
 
-/*! LOGIN */
+#aviso_privacidad_content::-webkit-scrollbar { /* Para ocultar scrollbar */
+  width: 0;
+}
+
+/*! <------------------------- LOGIN -------------------------> */
 #body-login{
   background-image: url("./images/fondo_login.png");
   background-size: cover;
@@ -446,20 +449,14 @@ input:valid ~ label{
   margin-bottom: 0%;
 }
 
-button{
+.campos-ingresos button{
   /* display:flex; */
-  border-radius: 40px;
-  background-color: #30C207;
   width: 140px;
-  border: none;
   font-size: 16px;
-  font-family: Montserrat, sans-serif;
-  color: #f4f4f8;
   padding: 12px 8px;
   margin-top: 12px;
   margin-bottom: 12px;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
-  cursor: pointer;
 }  
 
 .campos-ingresos{

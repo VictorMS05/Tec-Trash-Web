@@ -6,12 +6,12 @@ import { Servicios } from "./principal/servicios";
 
 export function Principal() {
     return (
-        <div id="principal">
+        <> {/*Lo que se devuelve para renderizar debe estar dentro de un solo elemento*/}
             <Header />
             <Main />
             <Servicios />
             <Nosotros />
             <Footer />
-        </div>
+        </>
     )
 }
