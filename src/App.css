@@ -16,6 +16,11 @@
 
 /*! <------------------------- GENERAL -------------------------> */
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
 button {
   background-color: #30C207;
   border: none;
@@ -23,15 +28,102 @@ button {
   color: white;
   cursor: pointer;
   font-family: Montserrat-Arabic;
-}
+}  
 
 p {
   margin: 0;
-}  
+}    
 
 .scroll {
   cursor: pointer;
+}    
+
+/** Header */
+header {
+  align-items: center;
+  background-color: black;
+  color: white;
+  display: flex;
+  height: 10vh;
+  justify-content: space-between;
+  padding-left: 2vw;
 }  
+
+#logo_header {
+  height: 8vh;
+}  
+
+
+#menu {
+  align-items: center;
+  display: flex;
+  font-family: Intro;
+  font-size: 1.25rem;
+  height: 100%;
+}
+
+.menu_option {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  padding: 0 1vw;
+}
+
+.menu_option:hover {
+  background-color: #222222;
+}
+
+#registrarse {
+  border: 0.2vw solid white;
+  border-radius: 2vw;
+  margin: 0 2vw 0 1vw;
+  padding: 0.5vw 1vw;
+}
+
+#registrarse:hover {
+  background-color: #222222;
+  font-size: 1.35rem;
+  margin: 0 1.583vw 0 0.583vw;
+}
+
+.desplegable {
+  height: 100%;
+  position: relative;
+}
+
+#icono_header {
+  height: 75%;
+  margin: 8% 2vw 4% 1vw;
+}
+
+.submenu {
+  background-color: #111111;
+  display: none;
+  position: absolute;
+  right: 0;
+}
+
+.submenu_option {
+  cursor: pointer;
+  font-family: Montserrat-Arabic;
+  padding: 2vh 3vw;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.submenu_option:hover {
+  background-color: #333333;
+}
+
+.submenu hr {
+  margin: 0;
+  width: 100%;
+}
+
+.desplegable:hover .submenu {
+display: block;
+}
 
 /** Ventana emergente */
 .ventana_emergente_background {
@@ -45,7 +137,7 @@ p {
   position: fixed;
   top: 0;
   width: 100%;
-}
+}  
 
 .ventana_emergente_container {
   align-items: center;
@@ -60,47 +152,15 @@ p {
   padding: 3vh 3vw;
   position: fixed;
   width: 50%;
-}
+}  
 
 .ventana_emergente_container button {
   background-color: rgba(0, 0, 0, 0);
   font-size: 2rem;
   margin-left: auto;
-}
+}  
 
 /*! <------------------------- PÁGINA PRINCIPAL -------------------------> */
-
-/** Header */
-header {
-  align-items: center;
-  background-color: black;
-  color: white;
-  display: flex;
-  height: 10vh;
-  justify-content: space-between;
-  padding: 0 2vw;
-}  
-
-#logo_header {
-  height: 9vh;
-  margin: 0;
-}  
-
-
-#menu, #menu a {
-  align-items: center;
-  display: flex;
-  font-family: Intro;
-  font-size: 1.25rem;
-  gap: 1.75vw;
-  text-decoration: none;
-}    
-
-#registrarse {
-  border: 0.2vw solid white;
-  border-radius: 2vw;
-  padding: 0.5vw 1vw;
-}  
 
 /** Main section */
 #main_principal {
@@ -524,7 +584,7 @@ input:valid ~ label{
 
 
 
-a{
+form a{
   color: #fcfafa;
   font-size: 14px;
 }  

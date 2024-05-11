@@ -13,7 +13,8 @@ function App() { // Este es el componente principal de la aplicación
       <Routes>
         {/* Se define la ruta de la página principal y se renderiza*/}
         <Route path="/" element={<Principal />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/login_cliente" element={<Login />} />
+        <Route path="/registro_cliente" element={<Login />} />
         <Route path="/cliente" element={<Cliente />} />
         <Route path="/empleado" element={<Empleado />} />
         <Route path="/empresa" element={<Empresa />} />

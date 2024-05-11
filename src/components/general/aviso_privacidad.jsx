@@ -1,4 +1,4 @@
-import { VentanaEmergente } from "../general/ventana_emergente";
+import { VentanaEmergente } from "./ventana_emergente";
 
 export function AvisoPrivacidad({ estaActivo }) {
     return (

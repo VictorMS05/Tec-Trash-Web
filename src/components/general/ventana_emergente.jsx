@@ -1,5 +1,3 @@
-import { useState, Children } from "react";
-
 export function VentanaEmergente({ botonCerrar, estaActivo, titulo, children }) {
     return (
         <div className="ventana_emergente_background">

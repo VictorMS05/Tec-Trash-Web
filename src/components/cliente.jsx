@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Link as Scroll } from 'react-scroll';
-import { Footer } from './principal/footer';
+import { Footer } from './general/footer';
 
 
 export function Cliente() {
