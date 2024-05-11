@@ -1,0 +1,190 @@
+.avisos-texto {
+    /* text-align: center; */
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+#body-login {
+    background-image: url("./../images/fondo_login.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    backface-visibility: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat-Arabic, sans-serif;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    height: 100;
+}
+
+#body-login h3 {
+    top: 0.5vw;
+    font-family: Intro, sans-serif;
+}
+
+/** <------------------------- Campos de ingreso de datos -------------------------> */
+
+.bloques-campos {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin: 2vw 0;
+    width: 300px;
+    border-bottom: 2px solid #fff;
+}
+
+.bloques-campos label {
+    /*nombre del campo: correo, contra...*/
+    position: absolute;
+    top: 50%;
+    left: 48px;
+    transform: translateY(-40%);
+    color: #eaeef1;
+    font-size: 0.8rem;
+    /* pointer-events: node; */
+    transition: .5s;
+    /* font-weight: bold; */
+}
+
+input:focus~label,
+input:valid~label {
+    top: -5px;
+    /*aqui era 5px */
+}
+
+.bloques-campos input {
+    /*lo que se escribe dentro de los campos*/
+    /* position: relative; */
+    width: 97%;
+    height: 40px;
+    margin-left: 1.5vw;
+    right: -3px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding: -50px 0 5px;
+    /*arriba, derecha e izquierda, abajo*/
+    padding-top: 5px;
+    padding-bottom: 0;
+    color: #f3eeee;
+    margin-bottom: 0%;
+}
+
+.campos-ingresos button {
+    /* display:flex; */
+    width: 140px;
+    font-size: 16px;
+    padding: 12px 8px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+}
+
+.campos-ingresos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    background-color: rgba(203, 197, 197, 0.3);
+    padding: 2vw;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.contenedor h2 {
+    font-size: 2.3rem;
+    font-family: Intro Normal;
+    color: #f4f4f8;
+    align-items: center;
+    justify-content: center;
+}
+
+#cuenta-texto {
+    text-align: center;
+}
+
+.iconitos {
+    /* position: absolute; */
+    color: #fff;
+    font-size: 1.6rem;
+    /* top: 17px; */
+    margin: 0;
+    width: 1.9vw;
+    /* height: 2vw; */
+}
+
+.ojito {
+    /* position: absolute; */
+    color: #fff;
+    font-size: 1.6rem;
+    /* top: 17px; */
+    margin: 0;
+    width: 2vw;
+    /* height: 2vw; */
+}
+
+.redesSociales {
+    display: flex;
+    justify-content: center;
+}
+
+.redes {
+    /* flex: 1; */
+    margin: 1.2vw 15px;
+    width: 4vw;
+}
+
+/** <------------------------- Contenedor del login -------------------------> */
+
+.contenedor a {
+    /* color: #fcfafa; */
+    font-size: 14px;
+}
+
+.crear-cuenta {
+    color: #271ea2;
+    margin-left: 5px;
+    /* position:relative; */
+    text-decoration: underline;
+}
+
+form {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* text-align: center; */
+    /* align-items: center; */
+}
+
+/* .crear-cuenta, .preguntarCuenta{
+    display: inline;
+  } */
+
+.error {
+    color: rgb(241, 38, 38);
+    font-size: small;
+    font-weight: bold;
+}
+
+.contraIncorrecta {
+    color: rgb(241, 38, 38);
+    font-size: small;
+    text-align: left;
+    margin-top: 0%;
+}
+
+.esconder {
+    display: none;
+}

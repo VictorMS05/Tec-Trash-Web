@@ -1,0 +1,208 @@
+/** <------------------------- Main section -------------------------> */
+
+#main_principal {
+    align-items: center;
+    background-image: url("./../images/fondo_principal_inicio.png");
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 5.5vh;
+    justify-content: center;
+    padding: 9vh 0 8vh 0;
+}
+
+#main_title {
+    font-family: Intro;
+    font-size: 3.75rem;
+    margin: 0;
+}
+
+#main_subtitle {
+    font-family: Montserrat-Arabic;
+    font-size: 1.9rem;
+}
+
+#main_principal button {
+    background-color: #5C9BE6;
+    font-family: Montserrat-Arabic;
+    font-size: 1.5rem;
+    height: 11vh;
+    margin: 3vh 0;
+    width: 27.5vw;
+}
+
+/** <------------------------- Section "Servicios" -------------------------> */
+
+#servicios {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    padding: 6vh 0;
+}
+
+#title {
+    font-family: Intro;
+    font-size: 2.75rem;
+    margin: 2vh 0;
+
+}
+
+.container {
+    display: flex;
+    gap: 1.25vw;
+    justify-content: center;
+}
+
+.option {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+    width: 32vw;
+}
+
+.option img {
+    height: 11.5vw;
+}
+
+.option_title {
+    font-family: Montserrat-Arabic;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.option_description {
+    font-family: Montserrat-Arabic;
+    font-size: 1rem;
+    padding: 0 2vw;
+    text-align: center;
+}
+
+/** <------------------------- Section "Nosotros" -------------------------> */
+
+#nosotros_title {
+    background-image: url("./../images/fondo_principal_inicio.png");
+    background-position: center;
+    background-size: cover;
+    color: white;
+    font-family: Intro;
+    font-size: 2.25rem;
+    padding: 4vh 0;
+    text-align: center;
+}
+
+#quienes_somos_container {
+    align-items: center;
+    display: flex;
+    padding: 3vh 0 0 3vw;
+}
+
+.nosotros_subtitle {
+    font-family: Intro;
+    font-size: 2.1rem;
+    margin: 3vh 1.75vw;
+}
+
+#quienes_somos_description {
+    border: #68AA24 0.75vw solid;
+    border-radius: 4vw;
+    font-family: Montserrat-Arabic;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    padding: 1.5vh 2vw;
+    text-align: center;
+    width: 50vw;
+}
+
+#equipo_tectrash {
+    width: 40vw;
+}
+
+#mision_container,
+#vision_container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 3vh 3vw 3vh 6vw;
+}
+
+.nosotros_image {
+    margin-left: 3vw;
+    width: 20vw;
+}
+
+#mision_container div {
+    text-align: right;
+}
+
+#mision_description {
+    border: #5C9BE6 0.75vw solid;
+    border-radius: 4vw;
+    font-family: Montserrat-Arabic;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    padding: 1.5vh 2vw;
+    text-align: center;
+    width: 56vw;
+}
+
+#vision_description {
+    border: #68AA24 0.75vw solid;
+    border-radius: 4vw;
+    font-family: Montserrat-Arabic;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    padding: 1.5vh 2vw;
+    text-align: center;
+    width: 56vw;
+}
+
+#valores_container,
+#ubicacion_container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 3vh 0 3vh 0;
+}
+
+.valor_element_verde {
+    border: #68AA24 0.75vw solid;
+    border-radius: 4vw;
+    font-family: Montserrat-Arabic;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    margin-bottom: 2.25vh;
+    padding: 1.5vh 2vw;
+    text-align: center;
+    width: 90vw;
+}
+
+.valor_element_azul {
+    border: #5C9BE6 0.75vw solid;
+    border-radius: 4vw;
+    font-family: Montserrat-Arabic;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    margin-bottom: 2.25vh;
+    padding: 1.5vh 2vw;
+    text-align: center;
+    width: 90vw;
+}
+
+#ubicacion_tectrash {
+    border: #5C9BE6 0.75vw solid;
+    border-radius: 4vw;
+    height: 55vh;
+    margin: 3vh 0;
+    width: 65vw;
+}
+
+#direccion {
+    font-family: Montserrat-Arabic;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 3vh 0;
+}

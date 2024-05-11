@@ -1,0 +1,222 @@
+a {
+    color: white;
+    text-decoration: none;
+}
+
+button {
+    background-color: #30C207;
+    border: none;
+    border-radius: 5vw;
+    color: white;
+    cursor: pointer;
+    font-family: Montserrat-Arabic;
+}
+
+p {
+    margin: 0;
+}
+
+.scroll {
+    cursor: pointer;
+}
+
+/** <------------------------- Header -------------------------> */
+
+header {
+    align-items: center;
+    background-color: black;
+    color: white;
+    display: flex;
+    height: 10vh;
+    justify-content: space-between;
+    padding-left: 2vw;
+}
+
+#logo_header {
+    height: 8vh;
+}
+
+
+#menu {
+    align-items: center;
+    display: flex;
+    font-family: Intro;
+    font-size: 1.25rem;
+    height: 100%;
+}
+
+.menu_option {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    height: 100%;
+    padding: 0 1vw;
+}
+
+.menu_option:hover {
+    background-color: #222222;
+}
+
+#registrarse {
+    border: 0.2vw solid white;
+    border-radius: 2vw;
+    margin: 0 2vw 0 1vw;
+    padding: 0.5vw 1vw;
+}
+
+#registrarse:hover {
+    background-color: #222222;
+    font-size: 1.35rem;
+    margin: 0 1.583vw 0 0.583vw;
+}
+
+.desplegable {
+    height: 100%;
+    position: relative;
+}
+
+#icono_header {
+    height: 75%;
+    margin: 8% 2vw 4% 1vw;
+}
+
+.submenu {
+    background-color: #111111;
+    display: none;
+    position: absolute;
+    right: 0;
+}
+
+.submenu_option {
+    cursor: pointer;
+    font-family: Montserrat-Arabic;
+    padding: 2vh 3vw;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.submenu_option:hover {
+    background-color: #333333;
+}
+
+.submenu hr {
+    margin: 0;
+    width: 100%;
+}
+
+.desplegable:hover .submenu {
+    display: block;
+}
+
+/** <------------------------- Footer -------------------------> */
+
+footer {
+    align-items: center;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 6.5vh;
+    padding: 9vh 0 0 0;
+}
+
+#contacto_principal_container {
+    display: flex;
+    gap: 10vw;
+    padding-left: 8vw;
+}
+
+#contacto_principal_container img {
+    height: 5vw;
+}
+
+.contacto_principal {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: Montserrat-Arabic;
+    font-size: 1rem;
+    gap: 2.5vh;
+    justify-content: end;
+}
+
+#informacion_adicional {
+    align-items: end;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1vh;
+    width: 98%;
+}
+
+.informacion_adicional_label {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0.75rem;
+}
+
+#redes_sociales_container {
+    display: flex;
+    gap: 1vw;
+    padding: 0 0 1vh 2vw;
+}
+
+#redes_sociales_container a img {
+    border: white 0.2vw solid;
+    border-radius: 50%;
+    height: 4vw;
+}
+
+/** <------------------------- Aviso de privacidad -------------------------> */
+
+#aviso_privacidad_content {
+    background-color: #438617;
+    border-radius: 1vw;
+    font-family: Montserrat-Arabic;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    overflow-y: auto;
+    /* Scrollbar */
+    max-height: 50vh;
+    /* Scrollbar */
+    padding: 2vw;
+    text-align: justify;
+}
+
+#aviso_privacidad_content::-webkit-scrollbar {
+    /* Para ocultar scrollbar */
+    width: 0;
+}
+
+/** <------------------------- Ventana emergente -------------------------> */
+
+.ventana_emergente_background {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    color: white;
+    display: flex;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.ventana_emergente_container {
+    align-items: center;
+    background-color: #68AA24;
+    border: white 0.2vw solid;
+    border-radius: 4vw;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 0 10px;
+    display: flex;
+    flex-direction: column;
+    left: 25%;
+    padding: 3vh 3vw;
+    position: fixed;
+    width: 50%;
+}
+
+.ventana_emergente_container button {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 2rem;
+    margin-left: auto;
+}
