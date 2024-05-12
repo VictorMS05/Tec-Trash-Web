@@ -1,15 +1,17 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from "./general/header";
 import { Footer } from './general/footer';
 import { Main } from './general/main';
 
 export function Empleado({ id }) {
+    const [nombre, setNombre] = useState('');
+
     useEffect(() => {
-        fetch(`http://localhost:5000/empleado/` + id)
+        fetch('http://localhost:5000/empleado/' + id)
             .then(response => response.json())
             .then(data => {
-                console.log(data);
+                setNombre(data.data[0].nombre);
             })
             .catch(error => {
                 console.error('Hubo un error al solicitar la información del empleado');
@@ -35,7 +37,7 @@ export function Empleado({ id }) {
                     </nav>
                 </div>
             </Header>
-            <Main titulo='Bienvenido/a ' />
+            <Main titulo={'Bienvenido/a ' + nombre} />
             <Footer />
         </>
     )

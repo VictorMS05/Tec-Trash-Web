@@ -125,6 +125,7 @@ header {
     gap: 5.5vh;
     justify-content: center;
     padding: 9vh 0 8vh 0;
+    text-align: center;
 }
 
 #main_title {
