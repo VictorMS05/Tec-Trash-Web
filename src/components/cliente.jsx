@@ -3,7 +3,7 @@ import { Link as Scroll } from 'react-scroll';
 import { Footer } from './general/footer';
 
 
-export function Cliente() {
+export function Cliente({ id }) {
     return (
         <> {/*Lo que se devuelve para renderizar debe estar dentro de un solo elemento*/}
             <header>

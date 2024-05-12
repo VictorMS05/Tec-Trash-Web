@@ -1,37 +1,3 @@
-/** <------------------------- Main section -------------------------> */
-
-#main_principal {
-    align-items: center;
-    background-image: url("./../images/fondo_principal_inicio.png");
-    background-size: cover;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 5.5vh;
-    justify-content: center;
-    padding: 9vh 0 8vh 0;
-}
-
-#main_title {
-    font-family: Intro;
-    font-size: 3.75rem;
-    margin: 0;
-}
-
-#main_subtitle {
-    font-family: Montserrat-Arabic;
-    font-size: 1.9rem;
-}
-
-#main_principal button {
-    background-color: #5C9BE6;
-    font-family: Montserrat-Arabic;
-    font-size: 1.5rem;
-    height: 11vh;
-    margin: 3vh 0;
-    width: 27.5vw;
-}
-
 /** <------------------------- Section "Servicios" -------------------------> */
 
 #servicios {

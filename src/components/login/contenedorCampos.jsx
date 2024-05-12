@@ -12,7 +12,7 @@ import { Cliente } from './../cliente';
 
 
 
-export function ContenedorLogin(props){
+export function ContenedorLogin({ asignarId, estaAutenticado, titulo }){
   
   var [email, setEmail] = useState('');
   var [contra, setContra] = useState('');
@@ -75,7 +75,7 @@ export function ContenedorLogin(props){
         <Routes>
           <Route path="/cliente" element={<Cliente />} />
         </Routes>
-        <h3>{props.titulo}</h3>
+        <h3>{titulo}</h3>
         <form onSubmit={ingresar} >
           <div className="campos-ingresos">
             <CamposRegistro  type="text" nombreCampo = "Correo electrónico"  urlImg = {correito} nombre = "correito" id="correito" evento = {(e) => setEmail(e.target.value)}/>

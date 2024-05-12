@@ -1,3 +1,3 @@
-export function Empresa() {
+export function Empresa({ id }) {
   
 }
