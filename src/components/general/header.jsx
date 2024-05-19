@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom';
 import logo from './../../images/logo_TecTrash_BordeBlanco.png';
 import icono_perfil from './../../images/icon_header_perfil.png';
 
-export function Header({ perfil, children }) {
+export function Header({ perfil, rutaPrincipal, children }) {
     return (
         <header>
-            <Link to='/'>
+            <Link to={rutaPrincipal}>
                 <img id='logo_header' src={logo} alt="Logo" />
             </Link>
             <nav id="menu">
