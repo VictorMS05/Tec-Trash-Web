@@ -105,10 +105,10 @@ header {
     background-color: #333333;
 }
 
-.submenu hr {
+/* .submenu hr {
     margin: 0;
     width: 100%;
-}
+} */
 
 .desplegable:hover .submenu {
     display: block;
@@ -200,10 +200,13 @@ header {
     text-align: center;
 }
 
+.option_link {
+    margin-top: auto;
+}
+
 .option button {
     font-family: Montserrat-Arabic;
     font-size: 1.25rem;
-    margin-top: auto;
     padding: 2.5vh 2.5vw;
 }
 
