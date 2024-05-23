@@ -18,10 +18,10 @@ import { Inicio } from './components/empleado/inicio';
 import { Recoleccion } from './components/empleado/recoleccion';
 
 function App() { // Este es el componente principal de la aplicación
-  const [estaAutenticadoCliente, setEstaAutenticadoCliente] = useState(false); // Se define un estado para saber si el cliente está autenticado
+  const [estaAutenticadoCliente, setEstaAutenticadoCliente] = useState(true); // Se define un estado para saber si el cliente está autenticado
   const [estaAutenticadoEmpleado, setEstaAutenticadoEmpleado] = useState(true);
   const [estaAutenticadoEmpresa, setEstaAutenticadoEmpresa] = useState(false);
-  const [idCliente, setIdCliente] = useState(0); // Se define un estado para guardar el id del cliente
+  const [idCliente, setIdCliente] = useState(4811038517); // Se define un estado para guardar el id del cliente
   const [idEmpleado, setIdEmpleado] = useState('CACS031004M04');
   const [idEmpresa, setIdEmpresa] = useState('');
 
@@ -33,7 +33,7 @@ function App() { // Este es el componente principal de la aplicación
         {/* Se define la ruta de la página principal y se renderiza*/}
         <Route path="/" element={<Principal />} />
         {/* <------------------------- CLIENTE -------------------------> */}
-        <Route path="/login_cliente" element={<Login asignarId={setIdCliente} estaAutenticado={setEstaAutenticadoCliente} tipo_usuario = "cliente" />} />
+        <Route path="/login_cliente" element={<Login asignarId={setIdCliente} estaAutenticado={setEstaAutenticadoCliente} tipoUsuario = "cliente" />} />
         <Route path="/registro_cliente" element={<Registro />} />
         {/* Se define la ruta del cliente y se renderiza si está autenticado, si no se redirige al login del cliente. Además, se define como una ruta principal que contendra subrutas para la navegación en el menú */}
         <Route path="/cliente" element={estaAutenticadoCliente ?

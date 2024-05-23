@@ -26,13 +26,15 @@ export function ContenedorLogin({ tipo_usuario, autenticado, titulo}){
   contra = document.getElementById("password").value;
   contraIncorrecta = document.getElementById("contraIncorrecta");
 
-  url = 'https://tectrash.pythonanywhere.com/cliente/iniciar-sesion';
+  console.log(tipo_usuario);
+
+  url = 'https://tectrash.pythonanywhere.com/'+ tipo_usuario +'/iniciar-sesion';
   json ={
     correo: email,
     contrasenia: contra
   }
   event.preventDefault(); //Evitar que el form actualice la página
-  console.log(url);
+  
   console.log("Valor inicial de autentificacion" + autenticado)
   fetch(url, {
         method: 'POST',
@@ -52,7 +54,7 @@ export function ContenedorLogin({ tipo_usuario, autenticado, titulo}){
               console.log("Holis");
               alert("Si se pudo jiji");
               setAutenticado(true);
-              navigate('/registro_cliente');
+              navigate('/registro_cliente'); //Cambiar a la vista del usuario
               contraIncorrecta.style.display = "none";
             }else{
               console.log("Adios");
