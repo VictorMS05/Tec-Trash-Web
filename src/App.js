@@ -22,7 +22,7 @@ import { Historial } from './components/empleado/historial';
 import { Informes } from './components/empleado/informes';
 
 function App() { // Este es el componente principal de la aplicación
-  const [estaAutenticadoCliente, setEstaAutenticadoCliente] = useState(false); // Se define un estado para saber si el cliente está autenticado
+  const [estaAutenticadoCliente, setEstaAutenticadoCliente] = useState(true); // Se define un estado para saber si el cliente está autenticado
   const [estaAutenticadoEmpleado, setEstaAutenticadoEmpleado] = useState(true);
   const [estaAutenticadoEmpresa, setEstaAutenticadoEmpresa] = useState(true);
   const [idCliente, setIdCliente] = useState(0); // Se define un estado para guardar el id del cliente
@@ -46,7 +46,7 @@ function App() { // Este es el componente principal de la aplicación
           <Navigate to='/login_cliente' asignarId={setIdCliente} estaAutenticado={setEstaAutenticadoCliente} tipo_usuario = "cliente" replace/>
         } >
           {/* Se define la ruta principal del cliente y se renderiza */}
-          <Route index element={<Inicio />} />
+          <Route index element={<Inicio />} tipoUsuario="cliente" />
           {/* Se define una subruta del cliente y se renderiza */}
           <Route path="define_una_ruta_Fer" element={<h1>Y aqui pon el componente correspondiente</h1>} />
         </Route>

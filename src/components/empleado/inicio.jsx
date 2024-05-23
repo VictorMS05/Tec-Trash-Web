@@ -10,7 +10,7 @@ import historial_entregas from './../../images/icon_empleado_historialentrega.pn
 import informes from './../../images/icon_admin_informes.png';
 import crear_cuenta from './../../images/icon_admin_crearcuentaempleado.png'
 
-export function Inicio({ id, tipoUsuario }) {
+export function Inicio({ id, tipoUsuario, tipoUsuario }) {
     const [nombre, setNombre] = useState('');
     const [esAdministrador, setEsAdministrador] = useState(false);
 
