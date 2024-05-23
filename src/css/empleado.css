@@ -1,0 +1,111 @@
+/** <------------------------- Recolección -------------------------> **/
+
+.etiqueta {
+    background-color: #549D27;
+    border-radius: 4vw;
+    color: white;
+    font-family: Intro;
+    font-size: 1.75rem;
+    margin: 5vh 0;
+    padding: 6vh 2vw;
+    text-align: center;
+    width: 60%;
+}
+
+#progress_bar_container {
+    border: #549D27 2vw solid;
+    border-radius: 5vw;
+    padding: 7.5vh 2vw;
+}
+
+#progress_bar {
+    border: #5C9BE6 0.75vw solid;
+    border-radius: 5vw;
+    height: 10vh;
+    width: 70vw;
+}
+
+#progress {
+    background-color: #5C9BE6;
+    border-radius: 5vw;
+    height: 100%;
+    width: 0;
+}
+
+#recoleccion_button {
+    font-family: Montserrat-Arabic;
+    font-size: 1.5rem;
+    margin: 7.5vh;
+    padding: 3.5vh 2.5vw;
+}
+
+.desecho_recoleccion_container {
+    border: #549D27 1.5vw solid;
+    border-radius: 5vw;
+    font-family: Montserrat-Arabic;
+    font-size: 1.25rem;
+    margin: 1.5vh 0;  
+    padding: 2vh 0;
+    width: 85%;
+}
+
+.desecho_recoleccion_container p {
+    margin: 2vh 2vw;
+}
+
+.desecho_recoleccion_container span {
+    color:#549D27;
+}
+
+.desecho_recoleccion_container hr {
+    border: #549D27 solid 0.5vh;
+    border-style: dashed;
+    margin: 4vh 0;
+}
+
+.desecho_recoleccion_container form {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.desecho_recoleccion_container form label {
+    align-items: center;
+    background-image: url(./../images/empleado_imagen_fotosinagregar.png);
+    background-size: 100% 100%;
+    border-radius: 2.5vw;
+    color: #549D27;
+    cursor: pointer;
+    display: flex;
+    font-family: Montserrat-Arabic;
+    font-style: italic;
+    font-size: 1rem;
+    height: 20vw;
+    justify-content: center;
+    padding: 1vw;
+    text-align: center;
+    width: 20vw;
+}
+
+.contenedor_desecho_input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5vh;
+}
+
+.contenedor_desecho_input input {
+    border: #549D27 0.25vw solid;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    font-family: Montserrat-Arabic;
+    font-size: 1.25rem;
+    margin: 0 1vw;
+    padding: 0;
+    text-align: center;
+}
+
+.contenedor_desecho_input button {
+    font-size: 1.25rem;
+    margin: 0 auto;
+    padding: 1vh 2vw;
+}

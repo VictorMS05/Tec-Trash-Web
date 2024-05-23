@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import logo from './../../images/logo_TecTrash_BordeBlanco.png';
 import icono_perfil from './../../images/icon_header_perfil.png';
 
-export function Header({ perfil, rutaPrincipal, children }) {
+export function Header({ perfil, rutaPrincipal, estaAutenticado, children }) {
     return (
         <header>
             <Link to={rutaPrincipal}>
@@ -19,7 +19,7 @@ export function Header({ perfil, rutaPrincipal, children }) {
                                     <Link to=''>Perfil</Link>
                                 </div>
                                 <div className="submenu_option">
-                                    <Link to=''>Cerrar sesión</Link>
+                                    <Link to='/' onClick={() => estaAutenticado(false)}>Cerrar sesión</Link>
                                 </div>
                             </nav>
                         </div>
