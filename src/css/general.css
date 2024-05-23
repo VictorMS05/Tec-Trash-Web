@@ -322,3 +322,31 @@ footer {
     font-size: 2rem;
     margin-left: auto;
 }
+
+/** <------------------------- Calendario -------------------------> */
+
+.calendario_container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    justify-content: center;
+    padding-top: 7.5vh;
+}
+
+.calendario_title {
+    font-family: Montserrat-Arabic;
+    font-size: 2rem;
+}
+
+.calendario {
+    background-color: #68AA24;
+    border-radius: 5vw;
+    padding: 2vh 1vw;
+}
+
+.calendario_input {
+    border: white solid;
+    border-radius: 2.5vw;
+    cursor: pointer;
+}

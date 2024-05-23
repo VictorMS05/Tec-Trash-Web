@@ -58,12 +58,12 @@ function App() { // Este es el componente principal de la aplicación
           <Navigate to='/login_empleado' replace/>
         } />
         <Route path="/empleado" element={estaAutenticadoEmpleado ? 
-          <Empleado id={idEmpleado} /> 
+          <Empleado id={idEmpleado} estaAutenticado={estaAutenticadoEmpleado} /> 
           : 
           <Navigate to='/login_empleado' replace/>
         } >
           <Route index element={<Inicio id={idEmpleado} />} />
-          <Route path="recoleccion" element={<Recoleccion />} />
+          <Route path="recoleccion" element={<Recoleccion id={idEmpleado} />} />
           <Route path="inventario" element={<Inventario />} />
           <Route path="entrega" element={<Entrega />} />
           <Route path="historial/recolecciones" element={<Historial tipo='recolecciones' />} />

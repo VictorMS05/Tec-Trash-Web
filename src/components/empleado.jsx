@@ -3,7 +3,7 @@ import { Link, Outlet } from 'react-router-dom';
 import { Header } from "./general/header";
 import { Footer } from './general/footer';
 
-export function Empleado({ id }) {
+export function Empleado({ id, estaAutenticado }) {
     const [esAdministrador, setEsAdministrador] = useState(false);
 
     useEffect(() => {
@@ -21,7 +21,7 @@ export function Empleado({ id }) {
 
     return (
         <>
-            <Header perfil rutaPrincipal='/empleado'>
+            <Header perfil rutaPrincipal='/empleado' estaAutenticado={estaAutenticado} >
                 <Link className='menu_option' to='recoleccion'>Recolección</Link>
                 <Link className='menu_option' to='inventario'>Inventario</Link>
                 <Link className='menu_option' to='entrega'>Entrega</Link>
