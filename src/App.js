@@ -24,10 +24,10 @@ import { Informes } from './components/empleado/informes';
 function App() { // Este es el componente principal de la aplicación
   const [estaAutenticadoCliente, setEstaAutenticadoCliente] = useState(false); // Se define un estado para saber si el cliente está autenticado
   const [estaAutenticadoEmpleado, setEstaAutenticadoEmpleado] = useState(true);
-  const [estaAutenticadoEmpresa, setEstaAutenticadoEmpresa] = useState(false);
+  const [estaAutenticadoEmpresa, setEstaAutenticadoEmpresa] = useState(true);
   const [idCliente, setIdCliente] = useState(0); // Se define un estado para guardar el id del cliente
   const [idEmpleado, setIdEmpleado] = useState('MASV021105H42');
-  const [idEmpresa, setIdEmpresa] = useState('');
+  const [idEmpresa, setIdEmpresa] = useState('WMS200815VJR');
 
   return ( // Se regresa un JSX
     <Router> {/* Se envuelve todo en un Router para poder usar rutas */}
@@ -62,7 +62,7 @@ function App() { // Este es el componente principal de la aplicación
           : 
           <Navigate to='/login_empleado' replace/>
         } >
-          <Route index element={<Inicio id={idEmpleado} />} />
+          <Route index element={<Inicio id={idEmpleado} tipoUsuario='Empleado' />} />
           <Route path="recoleccion" element={<Recoleccion id={idEmpleado} />} />
           <Route path="inventario" element={<Inventario />} />
           <Route path="entrega" element={<Entrega />} />
@@ -77,7 +77,11 @@ function App() { // Este es el componente principal de la aplicación
           <Empresa id={idEmpresa} /> 
           : 
           <Navigate to='/login_empresa' replace/>
-        } />
+        } >
+          <Route index element={<Inicio id={idEmpresa} tipoUsuario='Empresa'/>} />
+          <Route path="entregas" element={<h1>Entregas</h1>} />
+          <Route path="asistencia" element={<h1>Asistencia</h1>} />
+        </Route>
       </Routes>
     </Router>
   );
