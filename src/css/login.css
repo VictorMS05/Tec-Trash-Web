@@ -2,6 +2,8 @@
     /* text-align: center; */
     font-size: 14px;
     margin-top: 20px;
+    margin-bottom: 0px;
+    grid-gap: 0;
 }
 
 #body-login {
@@ -42,7 +44,7 @@
     /*nombre del campo: correo, contra...*/
     position: absolute;
     top: 50%;
-    left: 48px;
+    left: 30px;
     transform: translateY(-40%);
     color: #eaeef1;
     font-size: 0.8rem;
@@ -51,9 +53,10 @@
     /* font-weight: bold; */
 }
 
+
 input:focus~label,
 input:valid~label {
-    top: -5px;
+    top: 5px;
     /*aqui era 5px */
 }
 
@@ -187,4 +190,7 @@ form {
 
 .esconder {
     display: none;
+}
+label{
+   grid-gap: 0; 
 }

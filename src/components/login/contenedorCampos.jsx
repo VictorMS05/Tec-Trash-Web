@@ -1,5 +1,5 @@
 import CamposRegistro from "./campos";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import correito from "./../../images/icon_correo_login.png";
 import candadito from "./../../images/icon_contra_login.png";
 import logo_facebook from "./../../images/logo_facebook_login.png"
@@ -7,16 +7,17 @@ import logo_google from "./../../images/logo_google_login.png"
 import logo_x from "./../../images/logo_x_login.png"
 import ojito from "./../../images/icon_mostrarcontra_login.png"
 import { useState } from "react";
-import { Link } from 'react-router-dom';
-import { Cliente } from './../cliente';
+import { useNavigate } from "react-router-dom";
+import { Link, Route, Routes } from 'react-router-dom';
 
 
-
-export function ContenedorLogin({ asignarId, estaAutenticado, titulo }){
+export function ContenedorLogin({ tipo_usuario, autenticado, titulo}){
   
   var [email, setEmail] = useState('');
   var [contra, setContra] = useState('');
   var [mensaje, setMensaje] = useState('');
+  var [autenticado, setAutenticado] = useState(false);
+  const navigate = useNavigate();
 
   async function ingresar(event){
       var url, json, contraIncorrecta, pagina_cliente;
@@ -25,16 +26,14 @@ export function ContenedorLogin({ asignarId, estaAutenticado, titulo }){
   contra = document.getElementById("password").value;
   contraIncorrecta = document.getElementById("contraIncorrecta");
 
-  
-  
-
-  url = 'http://127.0.0.1:5000/cliente/iniciar-sesion';
+  url = 'https://tectrash.pythonanywhere.com/cliente/iniciar-sesion';
   json ={
     correo: email,
     contrasenia: contra
   }
   event.preventDefault(); //Evitar que el form actualice la página
-
+  console.log(url);
+  console.log("Valor inicial de autentificacion" + autenticado)
   fetch(url, {
         method: 'POST',
         headers: {
@@ -47,11 +46,13 @@ export function ContenedorLogin({ asignarId, estaAutenticado, titulo }){
         .then(data => { // Devuelve otra promesa
             // Manejar la respuesta de la API
             // console.log(data);
-            
+            console.log("Ya llegó aquí :p");
             console.log(data.hasOwnProperty('status'));
             if(data.hasOwnProperty('status')){
               console.log("Holis");
               alert("Si se pudo jiji");
+              setAutenticado(true);
+              navigate('/registro_cliente');
               contraIncorrecta.style.display = "none";
             }else{
               console.log("Adios");
@@ -64,17 +65,14 @@ export function ContenedorLogin({ asignarId, estaAutenticado, titulo }){
             setMensaje("Hubo un error al intentar iniciar sesión.");
             alert("ASDFGHJK")
         });
+      
 
   }
-
   
-    
 
     return(
+      
       <div className="contenedor">
-        <Routes>
-          <Route path="/cliente" element={<Cliente />} />
-        </Routes>
         <h3>{titulo}</h3>
         <form onSubmit={ingresar} >
           <div className="campos-ingresos">
@@ -84,7 +82,7 @@ export function ContenedorLogin({ asignarId, estaAutenticado, titulo }){
             <p id = "contraIncorrecta" className="contraIncorrecta esconder">Contraseña incorrecta</p>
             <p className="error esconder">Error al iniciar sesión</p>
             <Link to='/login' className="avisos-texto">¿Olvidaste tu contraseña?</Link>
-            <Link to ='/cliente'><button type="submit">Ingresar</button></Link>
+            <button type="submit">Ingresar</button>
           </div>
           
           <div className='redesSociales'>
@@ -94,9 +92,9 @@ export function ContenedorLogin({ asignarId, estaAutenticado, titulo }){
           </div>
           <div id="cuenta-texto">
             <label className="avisos-texto" >¿No tienes una cuenta?</label>
-            <Link className="crear-cuenta avisos-texto">Crear una</Link><br/>
+            <Link className="crear-cuenta avisos-texto" to="">Crear una</Link><br/>
             <label className="avisos-texto">¿Tienes una empresa?</label>
-            <Link className="crear-cuenta avisos-texto">Inicia sesión</Link>
+            <Link className="crear-cuenta avisos-texto" to = "">Inicia sesión</Link>
           </div>
         </form>
       </div>

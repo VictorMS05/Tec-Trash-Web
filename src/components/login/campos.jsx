@@ -1,6 +1,6 @@
 export function CamposRegistro(props){
-
-    if(props.urlImg){
+    
+    if(props.urlImg ){
         return(
             <div className="bloques-campos">
                 <img className = "iconitos" src={props.urlImg}/>
@@ -13,7 +13,7 @@ export function CamposRegistro(props){
         return(
             <div className="bloques-campos">
                 <input type={props.tipo} value={props.nombJson} name={props.nombre} id={props.id} onChange={props.evento} required/>
-                <label>{props.nombreCampo}</label>  
+                <label >{props.nombreCampo}</label>  
                     
             </div>
             

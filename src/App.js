@@ -33,13 +33,13 @@ function App() { // Este es el componente principal de la aplicación
         {/* Se define la ruta de la página principal y se renderiza*/}
         <Route path="/" element={<Principal />} />
         {/* <------------------------- CLIENTE -------------------------> */}
-        <Route path="/login_cliente" element={<Login asignarId={setIdCliente} estaAutenticado={setEstaAutenticadoCliente} />} />
+        <Route path="/login_cliente" element={<Login asignarId={setIdCliente} estaAutenticado={setEstaAutenticadoCliente} tipo_usuario = "cliente" />} />
         <Route path="/registro_cliente" element={<Registro />} />
         {/* Se define la ruta del cliente y se renderiza si está autenticado, si no se redirige al login del cliente. Además, se define como una ruta principal que contendra subrutas para la navegación en el menú */}
-        <Route path="/cliente" element={estaAutenticadoCliente ? 
+        <Route path="/cliente" element={estaAutenticadoCliente ?
           <Cliente id={idCliente} /> 
           : 
-          <Navigate to='/login_cliente' replace/>
+          <Navigate to='/login_cliente' asignarId={setIdCliente} estaAutenticado={setEstaAutenticadoCliente} tipo_usuario = "cliente" replace/>
         } >
           {/* Se define la ruta principal del cliente y se renderiza */}
           <Route index element={<Inicio id={idEmpleado} />} />
@@ -47,11 +47,11 @@ function App() { // Este es el componente principal de la aplicación
           <Route path="define_una_ruta_Fer" element={<h1>Y aqui pon el componente correspondiente</h1>} />
         </Route>
         {/* <------------------------- EMPLEADO -------------------------> */}
-        <Route path="/login_empleado" element={<Login asignarId={setIdEmpleado} estaAutenticado={setEstaAutenticadoEmpleado} />} />
+        <Route path="/login_empleado" element={<Login asignarId={setIdEmpleado} estaAutenticado={setEstaAutenticadoEmpleado} tipo_usuario = "empleado" />} />
         <Route path="/registro_empleado" element={estaAutenticadoEmpleado ? 
           <Registro /> 
           : 
-          <Navigate to='/login_empleado' replace/>
+          <Navigate to='/login_empleado' asignarId={setIdCliente} estaAutenticado={setEstaAutenticadoCliente} tipo_usuario = "empleado" replace/>
         } />
         <Route path="/empleado" element={estaAutenticadoEmpleado ? 
           <Empleado /> 
