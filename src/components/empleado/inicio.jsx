@@ -10,12 +10,12 @@ import historial_entregas from './../../images/icon_empleado_historialentrega.pn
 import informes from './../../images/icon_admin_informes.png';
 import crear_cuenta from './../../images/icon_admin_crearcuentaempleado.png'
 
-export function Inicio({ id }) {
+export function Inicio({ id, tipoUsuario }) {
     const [nombre, setNombre] = useState('');
     const [esAdministrador, setEsAdministrador] = useState(false);
 
     useEffect(() => {
-        fetch('https://tectrash.pythonanywhere.com/empleado/' + id)
+        fetch('https://tectrash.pythonanywhere.com/'+tipoUsuario+'/' + id)
             .then(response => response.json())
             .then(data => {
                 setNombre(data.data[0].nombre);
