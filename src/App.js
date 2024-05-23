@@ -16,12 +16,16 @@ import { Principal } from './components/principal';
 import { Registro } from './components/registro';
 import { Inicio } from './components/empleado/inicio';
 import { Recoleccion } from './components/empleado/recoleccion';
+import { Inventario } from './components/empleado/inventario';
+import { Entrega } from './components/empleado/entrega';
+import { Historial } from './components/empleado/historial';
+import { Informes } from './components/empleado/informes';
 
 function App() { // Este es el componente principal de la aplicación
   const [estaAutenticadoCliente, setEstaAutenticadoCliente] = useState(true); // Se define un estado para saber si el cliente está autenticado
   const [estaAutenticadoEmpleado, setEstaAutenticadoEmpleado] = useState(true);
   const [estaAutenticadoEmpresa, setEstaAutenticadoEmpresa] = useState(false);
-  const [idCliente, setIdCliente] = useState(4811038517); // Se define un estado para guardar el id del cliente
+  const [idCliente, setIdCliente] = useState(0); // Se define un estado para guardar el id del cliente
   const [idEmpleado, setIdEmpleado] = useState('CACS031004M04');
   const [idEmpresa, setIdEmpresa] = useState('');
 
@@ -42,7 +46,7 @@ function App() { // Este es el componente principal de la aplicación
           <Navigate to='/login_cliente' asignarId={setIdCliente} estaAutenticado={setEstaAutenticadoCliente} tipo_usuario = "cliente" replace/>
         } >
           {/* Se define la ruta principal del cliente y se renderiza */}
-          <Route index element={<Inicio id={idEmpleado} />} />
+          <Route index element={<Inicio />} />
           {/* Se define una subruta del cliente y se renderiza */}
           <Route path="define_una_ruta_Fer" element={<h1>Y aqui pon el componente correspondiente</h1>} />
         </Route>
@@ -54,12 +58,17 @@ function App() { // Este es el componente principal de la aplicación
           <Navigate to='/login_empleado' asignarId={setIdCliente} estaAutenticado={setEstaAutenticadoCliente} tipo_usuario = "empleado" replace/>
         } />
         <Route path="/empleado" element={estaAutenticadoEmpleado ? 
-          <Empleado /> 
+          <Empleado id={idEmpleado} estaAutenticado={estaAutenticadoEmpleado} /> 
           : 
           <Navigate to='/login_empleado' replace/>
         } >
-          <Route index element={<Inicio />} />
-          <Route path="recoleccion" element={<Recoleccion />} />
+          <Route index element={<Inicio id={idEmpleado} />} />
+          <Route path="recoleccion" element={<Recoleccion id={idEmpleado} />} />
+          <Route path="inventario" element={<Inventario />} />
+          <Route path="entrega" element={<Entrega />} />
+          <Route path="historial/recolecciones" element={<Historial tipo='recolecciones' />} />
+          <Route path="historial/entregas" element={<Historial tipo='entregas' />} />
+          <Route path="informes" element={<Informes />} />
         </Route>
         {/* <------------------------- EMPRESA -------------------------> */}
         <Route path="/login_empresa" element={<Login asignarId={setIdEmpresa} estaAutenticado={setEstaAutenticadoEmpresa} />} />

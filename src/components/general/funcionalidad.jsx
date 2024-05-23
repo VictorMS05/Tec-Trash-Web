@@ -6,7 +6,7 @@ export function Funcionalidad({ rutaBoton, titulo, textoBoton, urlImagen, childr
             <img src={urlImagen} alt="Icono" />
             <p className='option_title'>{titulo}</p>
             <p className="option_description">{children}</p>
-            {textoBoton && <Link to={rutaBoton}><button>{textoBoton}</button></Link>}
+            {textoBoton && <Link className="option_link" to={rutaBoton}><button>{textoBoton}</button></Link>}
         </div>
     )
 }

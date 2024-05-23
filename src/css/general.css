@@ -105,10 +105,10 @@ header {
     background-color: #333333;
 }
 
-.submenu hr {
+/* .submenu hr {
     margin: 0;
     width: 100%;
-}
+} */
 
 .desplegable:hover .submenu {
     display: block;
@@ -200,10 +200,13 @@ header {
     text-align: center;
 }
 
+.option_link {
+    margin-top: auto;
+}
+
 .option button {
     font-family: Montserrat-Arabic;
     font-size: 1.25rem;
-    margin-top: auto;
     padding: 2.5vh 2.5vw;
 }
 
@@ -318,4 +321,32 @@ footer {
     background-color: rgba(0, 0, 0, 0);
     font-size: 2rem;
     margin-left: auto;
+}
+
+/** <------------------------- Calendario -------------------------> */
+
+.calendario_container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    justify-content: center;
+    padding-top: 7.5vh;
+}
+
+.calendario_title {
+    font-family: Montserrat-Arabic;
+    font-size: 2rem;
+}
+
+.calendario {
+    background-color: #68AA24;
+    border-radius: 5vw;
+    padding: 2vh 1vw;
+}
+
+.calendario_input {
+    border: white solid;
+    border-radius: 2.5vw;
+    cursor: pointer;
 }
