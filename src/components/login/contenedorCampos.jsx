@@ -11,95 +11,101 @@ import { useNavigate } from "react-router-dom";
 import { Link, Route, Routes } from 'react-router-dom';
 
 
-export function ContenedorLogin({ tipo_usuario, autenticado, titulo}){
-  
+export function ContenedorLogin({ tipo_usuario, autenticado, titulo }) {
+
   var [email, setEmail] = useState('');
   var [contra, setContra] = useState('');
   var [mensaje, setMensaje] = useState('');
   var [autenticado, setAutenticado] = useState(false);
   const navigate = useNavigate();
 
-  async function ingresar(event){
-      var url, json, contraIncorrecta, pagina_cliente;
+  async function ingresar(event) {
+    var url, json, contraIncorrecta, pagina_cliente;
 
-  email = document.getElementById("correito").value;
-  contra = document.getElementById("password").value;
-  contraIncorrecta = document.getElementById("contraIncorrecta");
+    email = document.getElementById("correito").value;
+    contra = document.getElementById("password").value;
+    contraIncorrecta = document.getElementById("contraIncorrecta");
 
-  url = 'https://tectrash.pythonanywhere.com/cliente/iniciar-sesion';
-  json ={
-    correo: email,
-    contrasenia: contra
-  }
-  event.preventDefault(); //Evitar que el form actualice la página
-  console.log(url);
-  console.log("Valor inicial de autentificacion" + autenticado)
-  fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(json)
+    url = 'https://tectrash.pythonanywhere.com/cliente/iniciar-sesion';
+    json = {
+      correo: email,
+      contrasenia: contra
+    }
+    event.preventDefault(); //Evitar que el form actualice la página
+    console.log(url);
+    console.log("Valor inicial de autentificacion" + autenticado)
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(json)
     }) // Hago una petición POST al servidor
-        .then(response => response.json())// Devuelve otra promesa
+      .then(response => response.json())// Devuelve otra promesa
 
-        .then(data => { // Devuelve otra promesa
-            // Manejar la respuesta de la API
-            // console.log(data);
-            console.log("Ya llegó aquí :p");
-            console.log(data.hasOwnProperty('status'));
-            if(data.hasOwnProperty('status')){
-              console.log("Holis");
-              alert("Si se pudo jiji");
-              setAutenticado(true);
-              navigate('/registro_cliente');
-              contraIncorrecta.style.display = "none";
-            }else{
-              console.log("Adios");
-              alert("No se pudo jiji");
-              contraIncorrecta.style.display = "block";
-            }
-            
-        })
-        .catch(error => { // Devuelve otra promesa
-            setMensaje("Hubo un error al intentar iniciar sesión.");
-            alert("ASDFGHJK")
-        });
-      
+      .then(data => { // Devuelve otra promesa
+        // Manejar la respuesta de la API
+        // console.log(data);
+        console.log("Ya llegó aquí :p");
+        console.log(data.hasOwnProperty('status'));
+        if (data.hasOwnProperty('status')) {
+          console.log("Holis");
+          setAutenticado(true);
+          navigate('/cliente');
+          // if (tipo_usuario === "Cliente") {
+          //   navigate('/cliente');
+          // } else {
+          //   if (tipo_usuario === "Empleado") {
+          //     navigate('/empleado');
+          //   } else {
+          //     navigate('/empresa');
+          //   }
+          // }
+          contraIncorrecta.style.display = "none";
+        } else {
+          console.log("Adios");
+          contraIncorrecta.style.display = "block";
+        }
+
+      })
+      .catch(error => { // Devuelve otra promesa
+        setMensaje("Hubo un error al intentar iniciar sesión.");
+      });
+
 
   }
-  
 
-    return(
-      
-      <div className="contenedor">
-        <h3>{titulo}</h3>
-        <form onSubmit={ingresar} >
-          <div className="campos-ingresos">
-            <CamposRegistro  type="text" nombreCampo = "Correo electrónico"  urlImg = {correito} nombre = "correito" id="correito" evento = {(e) => setEmail(e.target.value)}/>
-            <CamposRegistro tipo="password" nombreCampo = "Contraseña" urlImg = {candadito} urlImg2 = {ojito}  idOjito = "mostrar_contra" nombre = "password" id="password" evento = {(e) => setContra(e.target.value)}/>
 
-            <p id = "contraIncorrecta" className="contraIncorrecta esconder">Contraseña incorrecta</p>
-            <p className="error esconder">Error al iniciar sesión</p>
-            <Link to='/login' className="avisos-texto">¿Olvidaste tu contraseña?</Link>
-            <button type="submit">Ingresar</button>
-          </div>
-          
-          <div className='redesSociales'>
-            <a href='https://www.google.com/webhp?hl=es&sa=X&ved=0ahUKEwjppZX4triFAxXVIUQIHarcBdUQPAgJ'><img className = "redes" src={logo_google}/></a>
-            <a href='https://www.facebook.com/?locale=es_LA'><img className = "redes" src={logo_facebook}/></a>
-            <a href='https://twitter.com/?lang=es'><img className = "redes" src={logo_x}/></a>
-          </div>
-          <div id="cuenta-texto">
-            <label className="avisos-texto" >¿No tienes una cuenta?</label>
-            <Link className="crear-cuenta avisos-texto" to="">Crear una</Link><br/>
-            <label className="avisos-texto">¿Tienes una empresa?</label>
-            <Link className="crear-cuenta avisos-texto" to = "">Inicia sesión</Link>
-          </div>
-        </form>
-      </div>
-      
-    )
-    
+  return (
+
+    <div className="contenedor">
+      <h3>{titulo}</h3>
+      <form onSubmit={ingresar} >
+        <div className="campos-ingresos">
+          <CamposRegistro type="text" nombreCampo="Correo electrónico" urlImg={correito} nombre="correito" id="correito" evento={(e) => setEmail(e.target.value)} />
+          <CamposRegistro tipo="password" nombreCampo="Contraseña" urlImg={candadito} urlImg2={ojito} idOjito="mostrar_contra" nombre="password" id="password" evento={(e) => setContra(e.target.value)} />
+
+          <p id="contraIncorrecta" className="contraIncorrecta esconder">Contraseña incorrecta</p>
+          <p className="error esconder">Error al iniciar sesión</p>
+          <Link to='/login' className="avisos-texto">¿Olvidaste tu contraseña?</Link>
+          <button type="submit">Ingresar</button>
+        </div>
+
+        <div className='redesSociales'>
+          <a href='https://www.google.com/webhp?hl=es&sa=X&ved=0ahUKEwjppZX4triFAxXVIUQIHarcBdUQPAgJ'><img className="redes" src={logo_google} /></a>
+          <a href='https://www.facebook.com/?locale=es_LA'><img className="redes" src={logo_facebook} /></a>
+          <a href='https://twitter.com/?lang=es'><img className="redes" src={logo_x} /></a>
+        </div>
+        <div id="cuenta-texto">
+          <label className="avisos-texto" >¿No tienes una cuenta?</label>
+          <Link className="crear-cuenta avisos-texto" to="">Crear una</Link><br />
+          <label className="avisos-texto">¿Tienes una empresa?</label>
+          <Link className="crear-cuenta avisos-texto" to="">Inicia sesión</Link>
+        </div>
+      </form>
+    </div>
+
+  )
+
 }
 

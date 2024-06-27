@@ -3,6 +3,8 @@ import { Main } from './../general/main';
 import { ContenedorFuncionalidades } from './../general/contenedor_funcionalidades';
 import { Funcionalidad } from './../general/funcionalidad';
 import recoleccion from './../../images/icon_cliente_recoleccion.png';
+import historial from './../../images/icon_cliente_historial.png';
+import asistencia from './../../images/icon_cliente_asistencia.png';
 import inventario from './../../images/icon_empleado_inventario.png';
 import entrega from './../../images/icon_empleado_entrega.png';
 import historial_recolecciones from './../../images/icon_empleado_historialreco.png';
@@ -32,15 +34,38 @@ export function Inicio({ id, tipoUsuario }) {
         <>
             <Main titulo={'Bienvenido/a ' + nombre} />
             <ContenedorFuncionalidades>
-                <Funcionalidad titulo='Recolección' urlImagen={recoleccion} textoBoton='Registrar' rutaBoton='recoleccion'>Programa y/o realiza una recolección</Funcionalidad>
-                <Funcionalidad titulo='Inventario' urlImagen={inventario} textoBoton='Consultar' rutaBoton='inventario'>Consulta todos los desechos registrados en el sistema</Funcionalidad>
-                <Funcionalidad titulo='Entrega' urlImagen={entrega} textoBoton='Registrar' rutaBoton='entrega'>Registra y/o comienza una entrega de los desechos recolectados</Funcionalidad>
-                <Funcionalidad titulo='Historial de recolecciones' urlImagen={historial_recolecciones} textoBoton='Consultar' rutaBoton='historial/recolecciones'>Consulta la información de las recolecciones realizadas</Funcionalidad>
-                <Funcionalidad titulo='Historial de entregas' urlImagen={historial_entregas} textoBoton='Consultar' rutaBoton='historial/entregas'>Consulta la información de las entregas realizadas</Funcionalidad>
-                {esAdministrador &&
+                {tipoUsuario === 'Cliente' ?
                     <>
-                        <Funcionalidad titulo='Informes' urlImagen={informes} textoBoton='Consultar' rutaBoton='informes'>Consulta las estadisticas generales de la empresa</Funcionalidad>
-                        <Funcionalidad titulo='Crear cuenta' urlImagen={crear_cuenta} textoBoton='Registrar' rutaBoton='/registro_empleado'>Crea una cuenta para los empleados y/o aministradores</Funcionalidad>
+                        <Funcionalidad titulo='Registro' urlImagen={recoleccion} textoBoton='Registrar' rutaBoton='registro'>Registra un desecho y obten informacion sobre el envío y recolección.</Funcionalidad>
+                        <Funcionalidad titulo='Historial' urlImagen={historial} textoBoton='Consultar' rutaBoton='historial'>Consulta los desechos registrados en tu cuenta</Funcionalidad>
+                        <Funcionalidad titulo='Asistencia' urlImagen={asistencia} textoBoton='Registrar' rutaBoton='asistencia'>¿Problemas con los registros? ¿El envío no se completó correctamente? ¡Tenemos la respuesta!</Funcionalidad>
+                    </>
+                    :
+                    <>
+                        {tipoUsuario === 'Empleado' ?
+                            <>
+                                <Funcionalidad titulo='Recolección' urlImagen={recoleccion} textoBoton='Registrar' rutaBoton='recoleccion'>Programa y/o realiza una recolección</Funcionalidad>
+                                <Funcionalidad titulo='Inventario' urlImagen={inventario} textoBoton='Consultar' rutaBoton='inventario'>Consulta todos los desechos registrados en el sistema</Funcionalidad>
+                                <Funcionalidad titulo='Entrega' urlImagen={entrega} textoBoton='Registrar' rutaBoton='entrega'>Registra y/o comienza una entrega de los desechos recolectados</Funcionalidad>
+                                <Funcionalidad titulo='Historial de recolecciones' urlImagen={historial_recolecciones} textoBoton='Consultar' rutaBoton='historial/recolecciones'>Consulta la información de las recolecciones realizadas</Funcionalidad>
+                                <Funcionalidad titulo='Historial de entregas' urlImagen={historial_entregas} textoBoton='Consultar' rutaBoton='historial/entregas'>Consulta la información de las entregas realizadas</Funcionalidad>
+                                {esAdministrador &&
+                                    <>
+                                        <Funcionalidad titulo='Informes' urlImagen={informes} textoBoton='Consultar' rutaBoton='informes'>Consulta las estadisticas generales de la empresa</Funcionalidad>
+                                        <Funcionalidad titulo='Crear cuenta' urlImagen={crear_cuenta} textoBoton='Registrar' rutaBoton='/registro_empleado'>Crea una cuenta para los empleados y/o aministradores</Funcionalidad>
+                                    </>
+                                }
+                            </>
+                            :
+                            <>
+                                <Funcionalidad titulo='Recolección' urlImagen={recoleccion} textoBoton='Registrar' rutaBoton='recoleccion'>Programa y/o realiza una recolección</Funcionalidad>
+                                <Funcionalidad titulo='Inventario' urlImagen={inventario} textoBoton='Consultar' rutaBoton='inventario'>Consulta todos los desechos registrados en el sistema</Funcionalidad>
+                                <Funcionalidad titulo='Entrega' urlImagen={entrega} textoBoton='Registrar' rutaBoton='entrega'>Registra y/o comienza una entrega de los desechos recolectados</Funcionalidad>
+                                <Funcionalidad titulo='Historial de recolecciones' urlImagen={historial_recolecciones} textoBoton='Consultar' rutaBoton='historial/recolecciones'>Consulta la información de las recolecciones realizadas</Funcionalidad>
+                                <Funcionalidad titulo='Historial de entregas' urlImagen={historial_entregas} textoBoton='Consultar' rutaBoton='historial/entregas'>Consulta la información de las entregas realizadas</Funcionalidad>
+
+                            </>
+                        }
                     </>
                 }
             </ContenedorFuncionalidades>

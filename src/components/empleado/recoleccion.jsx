@@ -55,7 +55,7 @@ export function Recoleccion({ id }) {
                         });
                 }
                 if (estatusRecoleccion === 'EN PROCESO') {
-                    fetch('https://tectrash.pythonanywhere.com/recoleccion/' + idRecoleccion + '/desechos')
+                    fetch('https://tectrash.pythonanywhere.com/desecho/todos')
                         .then(response => response.json())
                         .then(data => {
                             if (data.data.length > 0) {
