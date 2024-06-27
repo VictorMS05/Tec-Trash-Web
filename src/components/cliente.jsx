@@ -1,18 +1,19 @@
-import { Link } from 'react-router-dom';
-import { Link as Scroll } from 'react-scroll';
+import { useState, useEffect } from 'react';
+import { Link, Outlet } from 'react-router-dom';
+import { Header } from "./general/header";
 import { Footer } from './general/footer';
 
+export function Cliente({ id, estaAutenticado }) {
 
-export function Cliente({ id }) {
     return (
-        <> {/*Lo que se devuelve para renderizar debe estar dentro de un solo elemento*/}
-            <header>
-                <Scroll className='scroll' to='servicios'>Servicios</Scroll>
-                <Scroll className='scroll' to='nosotros'>Nosotros</Scroll>
-                <Link to='/login'>Iniciar sesión</Link>
-                <Link id='registrarse' to='/registro'>Registrarse</Link>
-            </header>
+        <>
+            <Header perfil rutaPrincipal='/cliente' estaAutenticado={estaAutenticado} >
+                <Link className='menu_option' to='registro'>Registro</Link>
+                <Link className='menu_option' to='historial'>Historial</Link>
+                <Link className='menu_option' to='asistencia'>Asistencia</Link>
+            </Header>
+            <Outlet />
             <Footer />
         </>
-    );
+    )
 }
